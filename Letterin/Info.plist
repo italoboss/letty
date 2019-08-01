@@ -2,8 +2,53 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>UIAppFonts</key>
+	<array>
+		<string>Sofia-Regular.otf</string>
+		<string>riffic-bold.ttf</string>
+		<string>PlayfairDisplaySC-Regular.otf</string>
+		<string>PlayfairDisplaySC-Italic.otf</string>
+		<string>PlayfairDisplaySC-BoldItalic.otf</string>
+		<string>PlayfairDisplaySC-Bold.otf</string>
+		<string>PlayfairDisplaySC-BlackItalic.otf</string>
+		<string>PlayfairDisplaySC-Black.otf</string>
+		<string>PlayfairDisplay-Regular.otf</string>
+		<string>PlayfairDisplay-Italic.otf</string>
+		<string>PlayfairDisplay-BoldItalic.otf</string>
+		<string>PlayfairDisplay-Bold.otf</string>
+		<string>PlayfairDisplay-BlackItalic.otf</string>
+		<string>PlayfairDisplay-Black.otf</string>
+		<string>Pacifico.ttf</string>
+		<string>NexaRustSlab-BlackShadow01-Free.otf</string>
+		<string>NexaRustScriptL-0-Free.otf</string>
+		<string>NexaRustSans-Black-Free.otf</string>
+		<string>NexaRustHandmade-Extended-Free.otf</string>
+		<string>Lobster_1.3.otf</string>
+		<string>learning_curve_regular_ot_ps.otf</string>
+		<string>learning_curve_dashed_ot_ps.otf</string>
+		<string>learning_curve_bold_ot_ps.otf</string>
+		<string>KaushanScript-Regular.otf</string>
+		<string>introscriptr-h2base.otf</string>
+		<string>introrustg-base2line.otf</string>
+		<string>introheadr-base.otf</string>
+		<string>geometria-light.otf</string>
+		<string>DancingScript-Regular.otf</string>
+		<string>CaviarDreams.ttf</string>
+		<string>Caviar_Dreams_BoldItalic.ttf</string>
+		<string>Caviar_Dreams_Italic.ttf</string>
+		<string>Caviar_Dreams_Bold.ttf</string>
+		<string>BebasNeue-Thin.otf</string>
+		<string>BebasNeue-Regular.otf</string>
+		<string>BebasNeue-Light.otf</string>
+		<string>BebasNeue-Bold.otf</string>
+		<string>BebasNeue-Book.otf</string>
+		<string>Allura-Regular.otf</string>
+		<string>AbrilFatface-Regular.otf</string>
+	</array>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
+	<key>CFBundleDisplayName</key>
+	<string>Letty</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
@@ -15,15 +60,13 @@
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.0</string>
+	<string>1.0.0</string>
 	<key>CFBundleVersion</key>
 	<string>1</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
-	<key>UIMainStoryboardFile</key>
-	<string>Main</string>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>
@@ -31,8 +74,8 @@
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
-		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
+		<string>UIInterfaceOrientationLandscapeLeft</string>
 	</array>
 	<key>UISupportedInterfaceOrientations~ipad</key>
 	<array>
