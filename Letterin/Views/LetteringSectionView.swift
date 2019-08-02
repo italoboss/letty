@@ -12,6 +12,8 @@ class LetteringSectionView: UIView {
     
     private let placeholderText = "Tap to edit"
     private let placeholderTextColor = UIColor.gray
+    private let placeholderFont = UIFont.systemFont(ofSize: 21)
+    
     var text: String? = nil {
         didSet { setNeedsDisplay() }
     }
@@ -24,7 +26,10 @@ class LetteringSectionView: UIView {
     var textColor: UIColor? = nil {
         didSet { setNeedsDisplay() }
     }
-    var font = UIFont.systemFont(ofSize: 21) {
+    var fontName: String? = nil {
+        didSet { setNeedsDisplay() }
+    }
+    var fontSize: CGFloat = 21 {
         didSet { setNeedsDisplay() }
     }
     
@@ -35,7 +40,7 @@ class LetteringSectionView: UIView {
                 string: text ?? placeholderText,
                 attributes: [
                     .foregroundColor: textColor ?? placeholderTextColor,
-                    .font: font
+                    .font: UIFont(name: fontName ?? ".SFUIDisplay", size: fontSize) ?? placeholderFont
             ]),
             angle: angle,
             radius: radius

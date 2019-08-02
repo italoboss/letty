@@ -49,16 +49,16 @@ class SimpleOneTemplate: UIImageView {
 //        middleSection.backgroundColor = .lightGray
 //        bottomSection.backgroundColor = .lightGray
         
-        topSection.font = UIFont.systemFont(ofSize: 42.0)
+        topSection.fontSize = 42.0
         topSection.radius = 200
         
         smallSection.radius = 10000
         
         middleSection.radius = 10000
-        middleSection.font = UIFont.systemFont(ofSize: 42.0)
+        middleSection.fontSize = 42.0
         
         bottomSection.radius = 10000
-        bottomSection.font = UIFont.systemFont(ofSize: 32.0)
+        bottomSection.fontSize = 32.0
         
         lastSection.radius = 10000
     }

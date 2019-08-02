@@ -66,17 +66,22 @@ class EditSectionViewController: UIViewController {
         
         editTextView.placeholder = "Type something"
         editTextView.textAlignment = .center
-        editTextView.font = UIFont.systemFont(ofSize: fontSize)
+        editTextView.font = UIFont(name: allFontsName.first ?? ".SFUIDisplay", size: fontSize)
         editTextView.textColor = Colors.all.first
         editTextView.becomeFirstResponder()
         editTextView.anchor(left: view.layoutMarginsGuide.leftAnchor, right: view.layoutMarginsGuide.rightAnchor, centerY: view.centerYAnchor, paddingLeft: 16, paddingBottom: 140, paddingRight: 16)
         
         var selectedColorIndex = 0
+        var selectedFontIndex = 0
         if let section = section {
             editTextView.text = section.text
             if let textColor = section.textColor {
                 editTextView.textColor = textColor
                 selectedColorIndex = Colors.all.firstIndex(of: textColor) ?? 0
+            }
+            if let fontName = section.fontName {
+                editTextView.font = UIFont(name: fontName, size: fontSize)
+                selectedFontIndex = allFontsName.firstIndex(of: fontName) ?? 0
             }
         }
         
@@ -89,12 +94,12 @@ class EditSectionViewController: UIViewController {
             
             colorCollection.anchor(top: accessory.topAnchor, left: accessory.leftAnchor, right: accessory.rightAnchor, height: 50)
             colorCollection.showsHorizontalScrollIndicator = false
-            colorCollection.selectItem(at: IndexPath(row: selectedColorIndex, section: 0), animated: false, scrollPosition: UICollectionView.ScrollPosition.left)
+            colorCollection.selectItem(at: IndexPath(row: selectedColorIndex, section: 0), animated: false, scrollPosition: UICollectionView.ScrollPosition.centeredHorizontally)
             
             fontCollection.anchor(left: accessory.leftAnchor, bottom: accessory.bottomAnchor, right: accessory.rightAnchor, height: 40)
             fontCollection.showsHorizontalScrollIndicator = false
             if !allFontsName.isEmpty {
-                fontCollection.selectItem(at: IndexPath(row: 0, section: 0), animated: false, scrollPosition: UICollectionView.ScrollPosition.left)
+                fontCollection.selectItem(at: IndexPath(row: selectedFontIndex, section: 0), animated: false, scrollPosition: UICollectionView.ScrollPosition.centeredHorizontally)
             }
             
             editTextView.inputAccessoryView = accessory
@@ -136,6 +141,7 @@ class EditSectionViewController: UIViewController {
         if let section = section {
             section.text = editTextView.text
             section.textColor = editTextView.textColor ?? .black
+            section.fontName = editTextView.font?.fontName
         }
         self.dismiss(animated: true, completion: nil)
     }
@@ -177,7 +183,6 @@ extension EditSectionViewController: UICollectionViewDelegate {
         else if collectionView == fontPickerCollection {
             let fontName = allFontsName[indexPath.row]
             editTextView.font = UIFont(name: fontName, size: fontSize)
-            print(fontName)
         }
     }
     
