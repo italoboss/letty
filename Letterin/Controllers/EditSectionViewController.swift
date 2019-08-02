@@ -40,6 +40,8 @@ class EditSectionViewController: UIViewController {
         return Fonts.allCases.map { $0.name }
     }
     private let fontSize: CGFloat = 24.0
+    private var selectedFontName = Fonts.abrilRegular.name
+    
     
     init(section: LetteringSectionView?) {
         super.init(nibName: nil, bundle: Bundle.main)
@@ -141,7 +143,7 @@ class EditSectionViewController: UIViewController {
         if let section = section {
             section.text = editTextView.text
             section.textColor = editTextView.textColor ?? .black
-            section.fontName = editTextView.font?.fontName
+            section.fontName = selectedFontName
         }
         self.dismiss(animated: true, completion: nil)
     }
@@ -182,6 +184,7 @@ extension EditSectionViewController: UICollectionViewDelegate {
         }
         else if collectionView == fontPickerCollection {
             let fontName = allFontsName[indexPath.row]
+            selectedFontName = fontName
             editTextView.font = UIFont(name: fontName, size: fontSize)
         }
     }
