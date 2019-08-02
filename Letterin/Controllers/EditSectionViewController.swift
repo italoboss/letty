@@ -82,6 +82,7 @@ class EditSectionViewController: UIViewController {
                 selectedColorIndex = Colors.all.firstIndex(of: textColor) ?? 0
             }
             if let fontName = section.fontName {
+                selectedFontName = fontName
                 editTextView.font = UIFont(name: fontName, size: fontSize)
                 selectedFontIndex = allFontsName.firstIndex(of: fontName) ?? 0
             }

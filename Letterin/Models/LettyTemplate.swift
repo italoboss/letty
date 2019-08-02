@@ -11,6 +11,6 @@ import UIKit
 struct LettyTemplate {
     
     var coverImage: UIImage
-    var controller: UIViewController
+    var controller: UIViewController.Type
     
 }
