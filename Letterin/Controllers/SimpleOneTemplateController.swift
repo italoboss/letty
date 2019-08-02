@@ -32,6 +32,9 @@ class SimpleOneTemplateController: LettyTemplateViewController {
         template.bottomSection.addGestureRecognizer(
             UITapGestureRecognizer(target: self, action: #selector(self.handleTap(gestureRecognizer:)))
         )
+        template.lastSection.addGestureRecognizer(
+            UITapGestureRecognizer(target: self, action: #selector(self.handleTap(gestureRecognizer:)))
+        )
     }
     
     @objc func handleTap(gestureRecognizer: UITapGestureRecognizer) {

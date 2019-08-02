@@ -69,6 +69,7 @@ class SimpleOneTemplate: UIImageView {
         smallSection.isUserInteractionEnabled = true
         middleSection.isUserInteractionEnabled = true
         bottomSection.isUserInteractionEnabled = true
+        lastSection.isUserInteractionEnabled = true
     }
     
 }
