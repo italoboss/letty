@@ -11,7 +11,7 @@ import UIKit
 class LetteringSectionView: UIView {
     
     private let placeholderText = "Tap to edit"
-    private let placeholderTextColor = UIColor.gray
+    private let placeholderTextColor = UIColor.darkGray.withAlphaComponent(0.6)
     private let placeholderFont = UIFont.systemFont(ofSize: 21)
     
     var text: String? = nil {

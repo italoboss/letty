@@ -51,10 +51,10 @@
 		0C86ECC522F3D3A80004D4AE /* NexaRustScriptL-0-Free.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0C86ECA522F3D3A80004D4AE /* NexaRustScriptL-0-Free.otf */; };
 		0C86ECC622F3D3A80004D4AE /* NexaRustSans-Black-Free.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0C86ECA622F3D3A80004D4AE /* NexaRustSans-Black-Free.otf */; };
 		0C86ECC922F3D3BC0004D4AE /* Sofia-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0C86ECC822F3D3BC0004D4AE /* Sofia-Regular.otf */; };
+		0C86ECCC22F4AD900004D4AE /* CenterCurvedOneTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C86ECCB22F4AD900004D4AE /* CenterCurvedOneTemplate.swift */; };
 		0C93C30622EB892F00A5973B /* SimpleOneTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C93C30522EB892F00A5973B /* SimpleOneTemplate.swift */; };
 		0C93C30822EB8B1200A5973B /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C93C30722EB8B1200A5973B /* UIViewExtension.swift */; };
 		0C93C30A22EB8B3600A5973B /* PropertyConcatente.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C93C30922EB8B3600A5973B /* PropertyConcatente.swift */; };
-		0C93C30D22EB9C2100A5973B /* SimpleOneTemplateController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C93C30C22EB9C2100A5973B /* SimpleOneTemplateController.swift */; };
 		0C93C31022EBA33A00A5973B /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C93C30F22EBA33A00A5973B /* Colors.swift */; };
 		0C93C31322EBA3E100A5973B /* AbrilFatface-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0C93C31222EBA3E100A5973B /* AbrilFatface-Regular.otf */; };
 		0C93C33122EBAA2600A5973B /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C93C33022EBAA2600A5973B /* Fonts.swift */; };
@@ -128,10 +128,10 @@
 		0C86ECA522F3D3A80004D4AE /* NexaRustScriptL-0-Free.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NexaRustScriptL-0-Free.otf"; sourceTree = "<group>"; };
 		0C86ECA622F3D3A80004D4AE /* NexaRustSans-Black-Free.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NexaRustSans-Black-Free.otf"; sourceTree = "<group>"; };
 		0C86ECC822F3D3BC0004D4AE /* Sofia-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Sofia-Regular.otf"; sourceTree = "<group>"; };
+		0C86ECCB22F4AD900004D4AE /* CenterCurvedOneTemplate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenterCurvedOneTemplate.swift; sourceTree = "<group>"; };
 		0C93C30522EB892F00A5973B /* SimpleOneTemplate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleOneTemplate.swift; sourceTree = "<group>"; };
 		0C93C30722EB8B1200A5973B /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		0C93C30922EB8B3600A5973B /* PropertyConcatente.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyConcatente.swift; sourceTree = "<group>"; };
-		0C93C30C22EB9C2100A5973B /* SimpleOneTemplateController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleOneTemplateController.swift; sourceTree = "<group>"; };
 		0C93C30F22EBA33A00A5973B /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		0C93C31222EBA3E100A5973B /* AbrilFatface-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AbrilFatface-Regular.otf"; sourceTree = "<group>"; };
 		0C93C33022EBAA2600A5973B /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
@@ -141,7 +141,7 @@
 		0C93C33A22ECA6D500A5973B /* riffic-bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "riffic-bold.ttf"; sourceTree = "<group>"; };
 		0CFD8BF722E9E979001F3837 /* Letterin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Letterin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0CFD8BFA22E9E979001F3837 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		0CFD8BFC22E9E979001F3837 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		0CFD8BFC22E9E979001F3837 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MainViewController.swift; path = ../MainViewController.swift; sourceTree = "<group>"; };
 		0CFD8C0122E9E97A001F3837 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0CFD8C0422E9E97A001F3837 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0CFD8C0622E9E97A001F3837 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -315,6 +315,7 @@
 			isa = PBXGroup;
 			children = (
 				0C93C30522EB892F00A5973B /* SimpleOneTemplate.swift */,
+				0C86ECCB22F4AD900004D4AE /* CenterCurvedOneTemplate.swift */,
 			);
 			path = Templates;
 			sourceTree = "<group>";
@@ -333,8 +334,8 @@
 		0C93C30B22EB9C0000A5973B /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				0CFD8BFC22E9E979001F3837 /* MainViewController.swift */,
 				0C86EC5522ECBF030004D4AE /* LettyTemplateViewController.swift */,
-				0C93C30C22EB9C2100A5973B /* SimpleOneTemplateController.swift */,
 				0C86EC6522F1F4980004D4AE /* EditSectionViewController.swift */,
 			);
 			path = Controllers;
@@ -427,7 +428,6 @@
 				0C86EC6722F1F50E0004D4AE /* Views */,
 				0C93C30B22EB9C0000A5973B /* Controllers */,
 				0CFD8BFA22E9E979001F3837 /* AppDelegate.swift */,
-				0CFD8BFC22E9E979001F3837 /* MainViewController.swift */,
 				0CFD8C0122E9E97A001F3837 /* Assets.xcassets */,
 				0CFD8C0322E9E97A001F3837 /* LaunchScreen.storyboard */,
 				0CFD8C0622E9E97A001F3837 /* Info.plist */,
@@ -605,7 +605,7 @@
 				0C86EC5A22ECCDAB0004D4AE /* LettyBg.swift in Sources */,
 				0C86EC6622F1F4980004D4AE /* EditSectionViewController.swift in Sources */,
 				0CFD8C2522EB7F6C001F3837 /* LetteringTemplate.swift in Sources */,
-				0C93C30D22EB9C2100A5973B /* SimpleOneTemplateController.swift in Sources */,
+				0C86ECCC22F4AD900004D4AE /* CenterCurvedOneTemplate.swift in Sources */,
 				0C93C30622EB892F00A5973B /* SimpleOneTemplate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

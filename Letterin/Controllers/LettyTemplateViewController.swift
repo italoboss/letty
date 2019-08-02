@@ -11,6 +11,7 @@ import UIKit
 class LettyTemplateViewController: UIViewController {
     
     var templateView: UIImageView? = nil
+    
     let closeButton: UIButton = {
         let button = UIButton()
         button.setTitle("X", for: .normal)
@@ -52,9 +53,12 @@ class LettyTemplateViewController: UIViewController {
         super.viewDidLoad()
         setupCollectionView()
         setupLayout()
+        setupGestures()
     }
     
     func setupLayout() {
+        // Used for layout templates
+        // templateView?.contentMode = .scaleAspectFit
         templateView?.contentMode = .scaleAspectFill
         view.backgroundColor = .white
         
@@ -92,6 +96,28 @@ class LettyTemplateViewController: UIViewController {
         collectionView.backgroundColor = .clear
         
         backgroundsCollection = collectionView
+    }
+    
+    func setupGestures() {
+        if let template = templateView {
+            let mirror = Mirror(reflecting: template)
+            
+            for child in mirror.children {
+                if let section = child.value as? LetteringSectionView {
+                    section.addGestureRecognizer(
+                        UITapGestureRecognizer(target: self, action: #selector(self.handleTap(gestureRecognizer:)))
+                    )
+                }
+            }
+            
+        }
+    }
+    
+    @objc func handleTap(gestureRecognizer: UITapGestureRecognizer) {
+        if let tapped = gestureRecognizer.view as? LetteringSectionView {
+            let editSection = EditSectionViewController(section: tapped)
+            self.present(editSection, animated: true)
+        }
     }
     
     @objc func didTapClose() {
