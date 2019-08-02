@@ -11,7 +11,21 @@ import UIKit
 class LettyTemplateViewController: UIViewController {
     
     var templateView: UIImageView? = nil
-    let closeButton = UIButton()
+    let closeButton: UIButton = {
+        let button = UIButton()
+        button.setTitle("X", for: .normal)
+        button.setTitleColor(Colors.primary, for: .normal)
+        button.addTarget(self, action: #selector(didTapClose), for: .touchUpInside)
+        return button
+    }()
+    let shareButton: UIButton = {
+        let button = UIButton()
+        button.setTitle("Share", for: .normal)
+        button.titleLabel?.font = UIFont(name: Fonts.abrilRegular.name, size: 17)
+        button.setTitleColor(Colors.primary, for: .normal)
+        button.addTarget(self, action: #selector(didTapShare), for: .touchUpInside)
+        return button
+    }()
     var backgroundsCollection: UICollectionView?
     let reusableCellIdentifier = "LettyBgCell"
     
@@ -42,15 +56,20 @@ class LettyTemplateViewController: UIViewController {
     
     func setupLayout() {
         templateView?.contentMode = .scaleAspectFill
-        view = templateView
-        view.addSubview(closeButton)
         view.backgroundColor = .white
         
-        closeButton.setTitle("X", for: .normal)
-        closeButton.setTitleColor(Colors.primary, for: .normal)
-        closeButton.addTarget(self, action: #selector(didTapClose), for: .touchUpInside)
+        if let template = templateView {
+            view.addSubview(template)
+            template.anchor(top: view.topAnchor, left: view.leftAnchor, bottom: view.bottomAnchor, right: view.rightAnchor)
+        }
+        
+        view.addSubview(closeButton)
+        view.addSubview(shareButton)
+        
         closeButton.anchor(top: view.layoutMarginsGuide.topAnchor, left: view.layoutMarginsGuide.leftAnchor,
                             paddingTop: 16)
+        shareButton.anchor(top: view.layoutMarginsGuide.topAnchor, right: view.layoutMarginsGuide.rightAnchor,
+                           paddingTop: 16)
         
         if let collection = backgroundsCollection {
             view.addSubview(collection)
@@ -77,6 +96,13 @@ class LettyTemplateViewController: UIViewController {
     
     @objc func didTapClose() {
         dismiss(animated: true, completion: nil)
+    }
+    
+    @objc func didTapShare() {
+        if let image = templateView?.asImage() {
+            let shareActivity = UIActivityViewController(activityItems: [image], applicationActivities: [])
+            present(shareActivity, animated: true)
+        }
     }
     
 }
