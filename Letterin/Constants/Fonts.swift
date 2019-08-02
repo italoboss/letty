@@ -6,62 +6,128 @@
 //  Copyright © 2019 KB. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
-struct Fonts {
-    static let abrilRegular = "AbrilFatface-Regular"
+enum Fonts: CaseIterable {
     
-    static let alluraRegular = "Allura-Regular"
+    case abrilRegular
     
-    static let bebasNeueBold = "BebasNeue-Bold.otf"
-    static let bebasNeueBook = "BebasNeue-Book.otf"
-    static let bebasNeueLight = "BebasNeue-Light.otf"
-    static let bebasNeueRegular = "BebasNeue-Regular.otf"
-    static let bebasNeueThin = "BebasNeue-Thin.otf"
+    case alluraRegular
     
-    static let caviarDreamsBold = "Caviar_Dreams_Bold.ttf"
-    static let caviarDreamsBoldItalic = "CaviarDreams_BoldItalic.ttf"
-    static let caviarDreamsItalic = "CaviarDreams_Italic.ttf"
-    static let caviarDreams = "CaviarDreams.ttf"
+    case bebasNeueBold
+    case bebasNeueBook
+    case bebasNeueLight
+    case bebasNeueRegular
+    case bebasNeueThin
     
-    static let dacingScript = "DancingScript-Regular.otf"
+    case caviarDreamsRegular
+//    case caviarDreamsBold
+//    case caviarDreamsBoldItalic
+//    case caviarDreamsItalic
     
-    static let geometria = "geometria-light.otf"
+//    case dacingScript
     
-    static let intro = "introheadr-base.otf"
-    static let introBaseLine = "introrustg-base2line.otf"
-    static let introBase = "introscriptr-h2base.otf"
+    case geometria
     
-    static let kaushan = "KaushanScript-Regular.otf"
+    case intro
+    case introBaseLine
+    case introBase
     
-    static let learningBold = "learning_curve_bold_ot_ps.otf"
-    static let learningDashed = "learning_curve_dashed_ot_ps.otf"
-    static let learningDings = "learning_curve_dings_ot_ps.otf"
-    static let learningRegular = "learning_curve_regular_ot_ps.otf"
+    case kaushan
     
-    static let lobster = "Lobster_1.3.otf"
+//    case learningBold
+//    case learningDashed
+//    case learningRegular
+//
+//    case lobster
+//    
+//    case nexaRustHand
+//    case nexaRustSans
+//    case nexaRustScript
+//    case nexaRustShadow
     
-    static let nexaRustHand = "NexaRustHandmade-Extended-Free.otf"
-    static let nexaRustSans = "NexaRustSans-Black-Free.otf"
-    static let nexaRustScript = "NexaRustScriptL-0-Free.otf"
-    static let nexaRustShadow = "NexaRustSlab-BlackShadow01-Free.otf"
+    case pacifico
     
-    static let pacifico = "Pacifico.ttf"
+    case playfairDisplayBlack
+    case playfairDisplayBlackItalic
+    case playfairDisplayBold
+    case playfairDisplayBoldItalic
+    case playfairDisplayItalic
+    case playfairDisplayRegular
+    case playfairDisplaySCBlack
+    case playfairDisplaySCBlackItalic
+    case playfairDisplaySCBold
+    case playfairDisplaySCBoldItalic
+    case playfairDisplaySCItalic
+    case playfairDisplaySCRegular
     
-    static let playfairDisplayBlack = "PlayfairDisplay-Black.otf"
-    static let playfairDisplayBlackItalic = "PlayfairDisplay-BlackItalic.otf"
-    static let playfairDisplayBold = "PlayfairDisplay-Bold.otf"
-    static let playfairDisplayBoldItalic = "PlayfairDisplay-BoldItalic.otf"
-    static let playfairDisplayItalic = "PlayfairDisplay-Italic.otf"
-    static let playfairDisplayRegular = "PlayfairDisplay-Regular.otf"
-    static let playfairDisplaySCBlack = "PlayfairDisplaySC-Black.otf"
-    static let playfairDisplaySCBlackItalic = "PlayfairDisplaySC-BlackItalic.otf"
-    static let playfairDisplaySCBold = "PlayfairDisplaySC-Bold.otf"
-    static let playfairDisplaySCBoldItalic = "PlayfairDisplaySC-BoldItalic.otf"
-    static let playfairDisplaySCItalic = "PlayfairDisplaySC-Italic.otf"
-    static let playfairDisplaySCRegular = "PlayfairDisplaySC-Regular.otf"
+    case rifficBold
     
-    static let rifficBold = "riffic-bold"
+    case sofia
+}
+
+extension Fonts {
     
-    static let sofia = "Sofia-Regular.ttf"
+    var name: String {
+        switch self {
+        case .abrilRegular: return "AbrilFatface-Regular"
+        case .alluraRegular: return "Allura-Regular"
+        
+        case .bebasNeueBold: return "BebasNeue-Bold"
+        case .bebasNeueBook: return "BebasNeue-Book"
+        case .bebasNeueLight: return "BebasNeue-Light"
+        case .bebasNeueRegular: return "BebasNeue-Regular"
+        case .bebasNeueThin: return "BebasNeue-Thin"
+            
+        case .caviarDreamsRegular: return "CaviarDreams"
+//        case .caviarDreamsBold: return "Caviar_Dreams_Bold"
+//        case .caviarDreamsBoldItalic: return "CaviarDreams_BoldItalic"
+//        case .caviarDreamsItalic: return "CaviarDreams_Italic"
+            
+//        case .dacingScript: return "DancingScript-Regular"
+            
+        case .geometria: return "geometria-light"
+            
+        case .intro: return "introheadr-base"
+        case .introBaseLine: return "introrustg-base2line"
+        case .introBase: return "introscriptr-h2base"
+            
+        case .kaushan: return "KaushanScript-Regular"
+            
+//        case .learningBold: return "learning_curve_bold_ot_ps"
+//        case .learningDashed: return "learning_curve_dashed_ot_ps"
+//        case .learningRegular: return "learning_curve_regular_ot_ps"
+            
+//        case .lobster: return "Lobster"
+            
+//        case .nexaRustHand: return "NexaRustHandmade-Extended-Free"
+//        case .nexaRustSans: return "NexaRustSans-Black-Free"
+//        case .nexaRustScript: return "NexaRustScriptL-0-Free"
+//        case .nexaRustShadow: return "NexaRustSlab-BlackShadow01-Free"
+            
+        case .pacifico: return "Pacifico"
+            
+        case .playfairDisplayBlack: return "PlayfairDisplay-Black"
+        case .playfairDisplayBlackItalic: return "PlayfairDisplay-BlackItalic"
+        case .playfairDisplayBold: return "PlayfairDisplay-Bold"
+        case .playfairDisplayBoldItalic: return "PlayfairDisplay-BoldItalic"
+        case .playfairDisplayItalic: return "PlayfairDisplay-Italic"
+        case .playfairDisplayRegular: return "PlayfairDisplay-Regular"
+        case .playfairDisplaySCBlack: return "PlayfairDisplaySC-Black"
+        case .playfairDisplaySCBlackItalic: return "PlayfairDisplaySC-BlackItalic"
+        case .playfairDisplaySCBold: return "PlayfairDisplaySC-Bold"
+        case .playfairDisplaySCBoldItalic: return "PlayfairDisplaySC-BoldItalic"
+        case .playfairDisplaySCItalic: return "PlayfairDisplaySC-Italic"
+        case .playfairDisplaySCRegular: return "PlayfairDisplaySC-Regular"
+            
+        case .rifficBold: return "riffic-bold"
+            
+        case .sofia: return "Sofia-Regular"
+        }
+    }
+    
+    var fontToCell: UIFont? {
+        return UIFont(name: self.name, size: 18)
+    }
+    
 }

@@ -13,24 +13,50 @@
 		0C86EC6622F1F4980004D4AE /* EditSectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C86EC6522F1F4980004D4AE /* EditSectionViewController.swift */; };
 		0C86EC6922F21FAA0004D4AE /* ColorPickerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C86EC6822F21FAA0004D4AE /* ColorPickerCollectionViewCell.swift */; };
 		0C86EC6B22F35F000004D4AE /* PropertyLoopable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C86EC6A22F35EFF0004D4AE /* PropertyLoopable.swift */; };
+		0C86EC6D22F3ABD30004D4AE /* FontPickerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C86EC6C22F3ABD20004D4AE /* FontPickerCollectionViewCell.swift */; };
+		0C86EC7822F3D36F0004D4AE /* BebasNeue-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0C86EC7722F3D36E0004D4AE /* BebasNeue-Bold.otf */; };
+		0C86EC7922F3D3800004D4AE /* BebasNeue-Book.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0C86EC7422F3D31E0004D4AE /* BebasNeue-Book.otf */; };
+		0C86EC7A22F3D3820004D4AE /* BebasNeue-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0C86EC7522F3D31E0004D4AE /* BebasNeue-Light.otf */; };
+		0C86EC7B22F3D3850004D4AE /* BebasNeue-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0C86EC7222F3D31E0004D4AE /* BebasNeue-Regular.otf */; };
+		0C86EC7C22F3D3880004D4AE /* BebasNeue-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0C86EC7622F3D31E0004D4AE /* BebasNeue-Thin.otf */; };
+		0C86ECA722F3D3A80004D4AE /* Pacifico.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0C86EC7E22F3D3A70004D4AE /* Pacifico.ttf */; };
+		0C86ECA822F3D3A80004D4AE /* PlayfairDisplaySC-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0C86EC8022F3D3A70004D4AE /* PlayfairDisplaySC-Regular.otf */; };
+		0C86ECA922F3D3A80004D4AE /* PlayfairDisplay-BoldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0C86EC8122F3D3A70004D4AE /* PlayfairDisplay-BoldItalic.otf */; };
+		0C86ECAA22F3D3A80004D4AE /* PlayfairDisplaySC-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0C86EC8222F3D3A70004D4AE /* PlayfairDisplaySC-Bold.otf */; };
+		0C86ECAB22F3D3A80004D4AE /* PlayfairDisplaySC-Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0C86EC8322F3D3A70004D4AE /* PlayfairDisplaySC-Italic.otf */; };
+		0C86ECAC22F3D3A80004D4AE /* PlayfairDisplaySC-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0C86EC8422F3D3A70004D4AE /* PlayfairDisplaySC-Black.otf */; };
+		0C86ECAD22F3D3A80004D4AE /* PlayfairDisplay-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0C86EC8522F3D3A70004D4AE /* PlayfairDisplay-Bold.otf */; };
+		0C86ECAE22F3D3A80004D4AE /* PlayfairDisplaySC-BoldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0C86EC8622F3D3A70004D4AE /* PlayfairDisplaySC-BoldItalic.otf */; };
+		0C86ECAF22F3D3A80004D4AE /* PlayfairDisplay-BlackItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0C86EC8722F3D3A70004D4AE /* PlayfairDisplay-BlackItalic.otf */; };
+		0C86ECB022F3D3A80004D4AE /* PlayfairDisplay-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0C86EC8822F3D3A70004D4AE /* PlayfairDisplay-Black.otf */; };
+		0C86ECB122F3D3A80004D4AE /* PlayfairDisplaySC-BlackItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0C86EC8922F3D3A70004D4AE /* PlayfairDisplaySC-BlackItalic.otf */; };
+		0C86ECB222F3D3A80004D4AE /* PlayfairDisplay-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0C86EC8A22F3D3A70004D4AE /* PlayfairDisplay-Regular.otf */; };
+		0C86ECB322F3D3A80004D4AE /* PlayfairDisplay-Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0C86EC8B22F3D3A70004D4AE /* PlayfairDisplay-Italic.otf */; };
+		0C86ECB422F3D3A80004D4AE /* introscriptr-h2base.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0C86EC8D22F3D3A70004D4AE /* introscriptr-h2base.otf */; };
+		0C86ECB522F3D3A80004D4AE /* introrustg-base2line.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0C86EC8E22F3D3A70004D4AE /* introrustg-base2line.otf */; };
+		0C86ECB622F3D3A80004D4AE /* introheadr-base.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0C86EC8F22F3D3A70004D4AE /* introheadr-base.otf */; };
+		0C86ECB722F3D3A80004D4AE /* Lobster.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0C86EC9122F3D3A70004D4AE /* Lobster.otf */; };
+		0C86ECB822F3D3A80004D4AE /* geometria-light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0C86EC9322F3D3A70004D4AE /* geometria-light.otf */; };
+		0C86ECB922F3D3A80004D4AE /* CaviarDreams-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0C86EC9522F3D3A70004D4AE /* CaviarDreams-Bold.ttf */; };
+		0C86ECBA22F3D3A80004D4AE /* CaviarDreams-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0C86EC9622F3D3A70004D4AE /* CaviarDreams-BoldItalic.ttf */; };
+		0C86ECBB22F3D3A80004D4AE /* CaviarDreams-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0C86EC9722F3D3A70004D4AE /* CaviarDreams-Regular.ttf */; };
+		0C86ECBC22F3D3A80004D4AE /* CaviarDreams-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0C86EC9822F3D3A70004D4AE /* CaviarDreams-Italic.ttf */; };
+		0C86ECBD22F3D3A80004D4AE /* DancingScript-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0C86EC9A22F3D3A70004D4AE /* DancingScript-Regular.otf */; };
+		0C86ECBE22F3D3A80004D4AE /* KaushanScript-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0C86EC9C22F3D3A70004D4AE /* KaushanScript-Regular.otf */; };
+		0C86ECBF22F3D3A80004D4AE /* learning_curve_dashed_ot_ps.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0C86EC9E22F3D3A80004D4AE /* learning_curve_dashed_ot_ps.otf */; };
+		0C86ECC022F3D3A80004D4AE /* learning_curve_regular_ot_ps.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0C86EC9F22F3D3A80004D4AE /* learning_curve_regular_ot_ps.otf */; };
+		0C86ECC222F3D3A80004D4AE /* learning_curve_bold_ot_ps.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0C86ECA122F3D3A80004D4AE /* learning_curve_bold_ot_ps.otf */; };
+		0C86ECC322F3D3A80004D4AE /* NexaRustHandmade-Extended-Free.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0C86ECA322F3D3A80004D4AE /* NexaRustHandmade-Extended-Free.otf */; };
+		0C86ECC422F3D3A80004D4AE /* NexaRustSlab-BlackShadow01-Free.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0C86ECA422F3D3A80004D4AE /* NexaRustSlab-BlackShadow01-Free.otf */; };
+		0C86ECC522F3D3A80004D4AE /* NexaRustScriptL-0-Free.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0C86ECA522F3D3A80004D4AE /* NexaRustScriptL-0-Free.otf */; };
+		0C86ECC622F3D3A80004D4AE /* NexaRustSans-Black-Free.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0C86ECA622F3D3A80004D4AE /* NexaRustSans-Black-Free.otf */; };
+		0C86ECC922F3D3BC0004D4AE /* Sofia-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0C86ECC822F3D3BC0004D4AE /* Sofia-Regular.otf */; };
 		0C93C30622EB892F00A5973B /* SimpleOneTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C93C30522EB892F00A5973B /* SimpleOneTemplate.swift */; };
 		0C93C30822EB8B1200A5973B /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C93C30722EB8B1200A5973B /* UIViewExtension.swift */; };
 		0C93C30A22EB8B3600A5973B /* PropertyConcatente.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C93C30922EB8B3600A5973B /* PropertyConcatente.swift */; };
 		0C93C30D22EB9C2100A5973B /* SimpleOneTemplateController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C93C30C22EB9C2100A5973B /* SimpleOneTemplateController.swift */; };
 		0C93C31022EBA33A00A5973B /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C93C30F22EBA33A00A5973B /* Colors.swift */; };
 		0C93C31322EBA3E100A5973B /* AbrilFatface-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0C93C31222EBA3E100A5973B /* AbrilFatface-Regular.otf */; };
-		0C93C32222EBA44C00A5973B /* Caviar Dreams in Resources */ = {isa = PBXBuildFile; fileRef = 0C93C31422EBA44C00A5973B /* Caviar Dreams */; };
-		0C93C32322EBA44C00A5973B /* kaushan-script in Resources */ = {isa = PBXBuildFile; fileRef = 0C93C31522EBA44C00A5973B /* kaushan-script */; };
-		0C93C32522EBA44C00A5973B /* Lobster in Resources */ = {isa = PBXBuildFile; fileRef = 0C93C31722EBA44C00A5973B /* Lobster */; };
-		0C93C32622EBA44C00A5973B /* Geometria in Resources */ = {isa = PBXBuildFile; fileRef = 0C93C31822EBA44C00A5973B /* Geometria */; };
-		0C93C32722EBA44C00A5973B /* Bebas Neue in Resources */ = {isa = PBXBuildFile; fileRef = 0C93C31922EBA44C00A5973B /* Bebas Neue */; };
-		0C93C32922EBA44C00A5973B /* Sofia in Resources */ = {isa = PBXBuildFile; fileRef = 0C93C31B22EBA44C00A5973B /* Sofia */; };
-		0C93C32A22EBA44C00A5973B /* Playfair in Resources */ = {isa = PBXBuildFile; fileRef = 0C93C31C22EBA44C00A5973B /* Playfair */; };
-		0C93C32B22EBA44C00A5973B /* Dancing Script in Resources */ = {isa = PBXBuildFile; fileRef = 0C93C31D22EBA44C00A5973B /* Dancing Script */; };
-		0C93C32C22EBA44C00A5973B /* Nexa Rust in Resources */ = {isa = PBXBuildFile; fileRef = 0C93C31E22EBA44C00A5973B /* Nexa Rust */; };
-		0C93C32D22EBA44C00A5973B /* Pacifico in Resources */ = {isa = PBXBuildFile; fileRef = 0C93C31F22EBA44C00A5973B /* Pacifico */; };
-		0C93C32E22EBA44C00A5973B /* Learning Curve in Resources */ = {isa = PBXBuildFile; fileRef = 0C93C32022EBA44C00A5973B /* Learning Curve */; };
-		0C93C32F22EBA44C00A5973B /* Intro in Resources */ = {isa = PBXBuildFile; fileRef = 0C93C32122EBA44C00A5973B /* Intro */; };
 		0C93C33122EBAA2600A5973B /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C93C33022EBAA2600A5973B /* Fonts.swift */; };
 		0C93C33422EBAADB00A5973B /* LettyTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C93C33322EBAADB00A5973B /* LettyTemplate.swift */; };
 		0C93C33722EBAC9200A5973B /* LettyTemplateCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C93C33622EBAC9200A5973B /* LettyTemplateCollectionViewCell.swift */; };
@@ -64,24 +90,50 @@
 		0C86EC6522F1F4980004D4AE /* EditSectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditSectionViewController.swift; sourceTree = "<group>"; };
 		0C86EC6822F21FAA0004D4AE /* ColorPickerCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPickerCollectionViewCell.swift; sourceTree = "<group>"; };
 		0C86EC6A22F35EFF0004D4AE /* PropertyLoopable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyLoopable.swift; sourceTree = "<group>"; };
+		0C86EC6C22F3ABD20004D4AE /* FontPickerCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontPickerCollectionViewCell.swift; sourceTree = "<group>"; };
+		0C86EC7222F3D31E0004D4AE /* BebasNeue-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BebasNeue-Regular.otf"; sourceTree = "<group>"; };
+		0C86EC7422F3D31E0004D4AE /* BebasNeue-Book.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BebasNeue-Book.otf"; sourceTree = "<group>"; };
+		0C86EC7522F3D31E0004D4AE /* BebasNeue-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BebasNeue-Light.otf"; sourceTree = "<group>"; };
+		0C86EC7622F3D31E0004D4AE /* BebasNeue-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BebasNeue-Thin.otf"; sourceTree = "<group>"; };
+		0C86EC7722F3D36E0004D4AE /* BebasNeue-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BebasNeue-Bold.otf"; sourceTree = "<group>"; };
+		0C86EC7E22F3D3A70004D4AE /* Pacifico.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Pacifico.ttf; sourceTree = "<group>"; };
+		0C86EC8022F3D3A70004D4AE /* PlayfairDisplaySC-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PlayfairDisplaySC-Regular.otf"; sourceTree = "<group>"; };
+		0C86EC8122F3D3A70004D4AE /* PlayfairDisplay-BoldItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PlayfairDisplay-BoldItalic.otf"; sourceTree = "<group>"; };
+		0C86EC8222F3D3A70004D4AE /* PlayfairDisplaySC-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PlayfairDisplaySC-Bold.otf"; sourceTree = "<group>"; };
+		0C86EC8322F3D3A70004D4AE /* PlayfairDisplaySC-Italic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PlayfairDisplaySC-Italic.otf"; sourceTree = "<group>"; };
+		0C86EC8422F3D3A70004D4AE /* PlayfairDisplaySC-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PlayfairDisplaySC-Black.otf"; sourceTree = "<group>"; };
+		0C86EC8522F3D3A70004D4AE /* PlayfairDisplay-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PlayfairDisplay-Bold.otf"; sourceTree = "<group>"; };
+		0C86EC8622F3D3A70004D4AE /* PlayfairDisplaySC-BoldItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PlayfairDisplaySC-BoldItalic.otf"; sourceTree = "<group>"; };
+		0C86EC8722F3D3A70004D4AE /* PlayfairDisplay-BlackItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PlayfairDisplay-BlackItalic.otf"; sourceTree = "<group>"; };
+		0C86EC8822F3D3A70004D4AE /* PlayfairDisplay-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PlayfairDisplay-Black.otf"; sourceTree = "<group>"; };
+		0C86EC8922F3D3A70004D4AE /* PlayfairDisplaySC-BlackItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PlayfairDisplaySC-BlackItalic.otf"; sourceTree = "<group>"; };
+		0C86EC8A22F3D3A70004D4AE /* PlayfairDisplay-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PlayfairDisplay-Regular.otf"; sourceTree = "<group>"; };
+		0C86EC8B22F3D3A70004D4AE /* PlayfairDisplay-Italic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PlayfairDisplay-Italic.otf"; sourceTree = "<group>"; };
+		0C86EC8D22F3D3A70004D4AE /* introscriptr-h2base.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "introscriptr-h2base.otf"; sourceTree = "<group>"; };
+		0C86EC8E22F3D3A70004D4AE /* introrustg-base2line.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "introrustg-base2line.otf"; sourceTree = "<group>"; };
+		0C86EC8F22F3D3A70004D4AE /* introheadr-base.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "introheadr-base.otf"; sourceTree = "<group>"; };
+		0C86EC9122F3D3A70004D4AE /* Lobster.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Lobster.otf; sourceTree = "<group>"; };
+		0C86EC9322F3D3A70004D4AE /* geometria-light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "geometria-light.otf"; sourceTree = "<group>"; };
+		0C86EC9522F3D3A70004D4AE /* CaviarDreams-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CaviarDreams-Bold.ttf"; sourceTree = "<group>"; };
+		0C86EC9622F3D3A70004D4AE /* CaviarDreams-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CaviarDreams-BoldItalic.ttf"; sourceTree = "<group>"; };
+		0C86EC9722F3D3A70004D4AE /* CaviarDreams-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CaviarDreams-Regular.ttf"; sourceTree = "<group>"; };
+		0C86EC9822F3D3A70004D4AE /* CaviarDreams-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CaviarDreams-Italic.ttf"; sourceTree = "<group>"; };
+		0C86EC9A22F3D3A70004D4AE /* DancingScript-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DancingScript-Regular.otf"; sourceTree = "<group>"; };
+		0C86EC9C22F3D3A70004D4AE /* KaushanScript-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KaushanScript-Regular.otf"; sourceTree = "<group>"; };
+		0C86EC9E22F3D3A80004D4AE /* learning_curve_dashed_ot_ps.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = learning_curve_dashed_ot_ps.otf; sourceTree = "<group>"; };
+		0C86EC9F22F3D3A80004D4AE /* learning_curve_regular_ot_ps.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = learning_curve_regular_ot_ps.otf; sourceTree = "<group>"; };
+		0C86ECA122F3D3A80004D4AE /* learning_curve_bold_ot_ps.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = learning_curve_bold_ot_ps.otf; sourceTree = "<group>"; };
+		0C86ECA322F3D3A80004D4AE /* NexaRustHandmade-Extended-Free.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NexaRustHandmade-Extended-Free.otf"; sourceTree = "<group>"; };
+		0C86ECA422F3D3A80004D4AE /* NexaRustSlab-BlackShadow01-Free.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NexaRustSlab-BlackShadow01-Free.otf"; sourceTree = "<group>"; };
+		0C86ECA522F3D3A80004D4AE /* NexaRustScriptL-0-Free.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NexaRustScriptL-0-Free.otf"; sourceTree = "<group>"; };
+		0C86ECA622F3D3A80004D4AE /* NexaRustSans-Black-Free.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NexaRustSans-Black-Free.otf"; sourceTree = "<group>"; };
+		0C86ECC822F3D3BC0004D4AE /* Sofia-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Sofia-Regular.otf"; sourceTree = "<group>"; };
 		0C93C30522EB892F00A5973B /* SimpleOneTemplate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleOneTemplate.swift; sourceTree = "<group>"; };
 		0C93C30722EB8B1200A5973B /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		0C93C30922EB8B3600A5973B /* PropertyConcatente.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyConcatente.swift; sourceTree = "<group>"; };
 		0C93C30C22EB9C2100A5973B /* SimpleOneTemplateController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleOneTemplateController.swift; sourceTree = "<group>"; };
 		0C93C30F22EBA33A00A5973B /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		0C93C31222EBA3E100A5973B /* AbrilFatface-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AbrilFatface-Regular.otf"; sourceTree = "<group>"; };
-		0C93C31422EBA44C00A5973B /* Caviar Dreams */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "Caviar Dreams"; sourceTree = "<group>"; };
-		0C93C31522EBA44C00A5973B /* kaushan-script */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "kaushan-script"; sourceTree = "<group>"; };
-		0C93C31722EBA44C00A5973B /* Lobster */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Lobster; sourceTree = "<group>"; };
-		0C93C31822EBA44C00A5973B /* Geometria */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Geometria; sourceTree = "<group>"; };
-		0C93C31922EBA44C00A5973B /* Bebas Neue */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "Bebas Neue"; sourceTree = "<group>"; };
-		0C93C31B22EBA44C00A5973B /* Sofia */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Sofia; sourceTree = "<group>"; };
-		0C93C31C22EBA44C00A5973B /* Playfair */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Playfair; sourceTree = "<group>"; };
-		0C93C31D22EBA44C00A5973B /* Dancing Script */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "Dancing Script"; sourceTree = "<group>"; };
-		0C93C31E22EBA44C00A5973B /* Nexa Rust */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "Nexa Rust"; sourceTree = "<group>"; };
-		0C93C31F22EBA44C00A5973B /* Pacifico */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Pacifico; sourceTree = "<group>"; };
-		0C93C32022EBA44C00A5973B /* Learning Curve */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "Learning Curve"; sourceTree = "<group>"; };
-		0C93C32122EBA44C00A5973B /* Intro */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Intro; sourceTree = "<group>"; };
 		0C93C33022EBAA2600A5973B /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
 		0C93C33322EBAADB00A5973B /* LettyTemplate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LettyTemplate.swift; sourceTree = "<group>"; };
 		0C93C33622EBAC9200A5973B /* LettyTemplateCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LettyTemplateCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -130,6 +182,135 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		0C86EC6E22F3D2C00004D4AE /* Riffic */ = {
+			isa = PBXGroup;
+			children = (
+				0C93C33A22ECA6D500A5973B /* riffic-bold.ttf */,
+			);
+			path = Riffic;
+			sourceTree = "<group>";
+		};
+		0C86EC6F22F3D2F50004D4AE /* BebasNeue */ = {
+			isa = PBXGroup;
+			children = (
+				0C86EC7722F3D36E0004D4AE /* BebasNeue-Bold.otf */,
+				0C86EC7422F3D31E0004D4AE /* BebasNeue-Book.otf */,
+				0C86EC7522F3D31E0004D4AE /* BebasNeue-Light.otf */,
+				0C86EC7222F3D31E0004D4AE /* BebasNeue-Regular.otf */,
+				0C86EC7622F3D31E0004D4AE /* BebasNeue-Thin.otf */,
+			);
+			path = BebasNeue;
+			sourceTree = "<group>";
+		};
+		0C86EC7D22F3D3A70004D4AE /* Pacifico */ = {
+			isa = PBXGroup;
+			children = (
+				0C86EC7E22F3D3A70004D4AE /* Pacifico.ttf */,
+			);
+			path = Pacifico;
+			sourceTree = "<group>";
+		};
+		0C86EC7F22F3D3A70004D4AE /* Playfair */ = {
+			isa = PBXGroup;
+			children = (
+				0C86EC8022F3D3A70004D4AE /* PlayfairDisplaySC-Regular.otf */,
+				0C86EC8122F3D3A70004D4AE /* PlayfairDisplay-BoldItalic.otf */,
+				0C86EC8222F3D3A70004D4AE /* PlayfairDisplaySC-Bold.otf */,
+				0C86EC8322F3D3A70004D4AE /* PlayfairDisplaySC-Italic.otf */,
+				0C86EC8422F3D3A70004D4AE /* PlayfairDisplaySC-Black.otf */,
+				0C86EC8522F3D3A70004D4AE /* PlayfairDisplay-Bold.otf */,
+				0C86EC8622F3D3A70004D4AE /* PlayfairDisplaySC-BoldItalic.otf */,
+				0C86EC8722F3D3A70004D4AE /* PlayfairDisplay-BlackItalic.otf */,
+				0C86EC8822F3D3A70004D4AE /* PlayfairDisplay-Black.otf */,
+				0C86EC8922F3D3A70004D4AE /* PlayfairDisplaySC-BlackItalic.otf */,
+				0C86EC8A22F3D3A70004D4AE /* PlayfairDisplay-Regular.otf */,
+				0C86EC8B22F3D3A70004D4AE /* PlayfairDisplay-Italic.otf */,
+			);
+			path = Playfair;
+			sourceTree = "<group>";
+		};
+		0C86EC8C22F3D3A70004D4AE /* Intro */ = {
+			isa = PBXGroup;
+			children = (
+				0C86EC8D22F3D3A70004D4AE /* introscriptr-h2base.otf */,
+				0C86EC8E22F3D3A70004D4AE /* introrustg-base2line.otf */,
+				0C86EC8F22F3D3A70004D4AE /* introheadr-base.otf */,
+			);
+			path = Intro;
+			sourceTree = "<group>";
+		};
+		0C86EC9022F3D3A70004D4AE /* Lobster */ = {
+			isa = PBXGroup;
+			children = (
+				0C86EC9122F3D3A70004D4AE /* Lobster.otf */,
+			);
+			path = Lobster;
+			sourceTree = "<group>";
+		};
+		0C86EC9222F3D3A70004D4AE /* Geometria */ = {
+			isa = PBXGroup;
+			children = (
+				0C86EC9322F3D3A70004D4AE /* geometria-light.otf */,
+			);
+			path = Geometria;
+			sourceTree = "<group>";
+		};
+		0C86EC9422F3D3A70004D4AE /* Caviar Dreams */ = {
+			isa = PBXGroup;
+			children = (
+				0C86EC9522F3D3A70004D4AE /* CaviarDreams-Bold.ttf */,
+				0C86EC9622F3D3A70004D4AE /* CaviarDreams-BoldItalic.ttf */,
+				0C86EC9722F3D3A70004D4AE /* CaviarDreams-Regular.ttf */,
+				0C86EC9822F3D3A70004D4AE /* CaviarDreams-Italic.ttf */,
+			);
+			path = "Caviar Dreams";
+			sourceTree = "<group>";
+		};
+		0C86EC9922F3D3A70004D4AE /* Dancing Script */ = {
+			isa = PBXGroup;
+			children = (
+				0C86EC9A22F3D3A70004D4AE /* DancingScript-Regular.otf */,
+			);
+			path = "Dancing Script";
+			sourceTree = "<group>";
+		};
+		0C86EC9B22F3D3A70004D4AE /* kaushan-script */ = {
+			isa = PBXGroup;
+			children = (
+				0C86EC9C22F3D3A70004D4AE /* KaushanScript-Regular.otf */,
+			);
+			path = "kaushan-script";
+			sourceTree = "<group>";
+		};
+		0C86EC9D22F3D3A80004D4AE /* Learning Curve */ = {
+			isa = PBXGroup;
+			children = (
+				0C86EC9E22F3D3A80004D4AE /* learning_curve_dashed_ot_ps.otf */,
+				0C86EC9F22F3D3A80004D4AE /* learning_curve_regular_ot_ps.otf */,
+				0C86ECA122F3D3A80004D4AE /* learning_curve_bold_ot_ps.otf */,
+			);
+			path = "Learning Curve";
+			sourceTree = "<group>";
+		};
+		0C86ECA222F3D3A80004D4AE /* Nexa Rust */ = {
+			isa = PBXGroup;
+			children = (
+				0C86ECA322F3D3A80004D4AE /* NexaRustHandmade-Extended-Free.otf */,
+				0C86ECA422F3D3A80004D4AE /* NexaRustSlab-BlackShadow01-Free.otf */,
+				0C86ECA522F3D3A80004D4AE /* NexaRustScriptL-0-Free.otf */,
+				0C86ECA622F3D3A80004D4AE /* NexaRustSans-Black-Free.otf */,
+			);
+			path = "Nexa Rust";
+			sourceTree = "<group>";
+		};
+		0C86ECC722F3D3BC0004D4AE /* Sofia */ = {
+			isa = PBXGroup;
+			children = (
+				0C86ECC822F3D3BC0004D4AE /* Sofia-Regular.otf */,
+			);
+			path = Sofia;
+			sourceTree = "<group>";
+		};
 		0C93C30322EB888600A5973B /* Templates */ = {
 			isa = PBXGroup;
 			children = (
@@ -173,19 +354,19 @@
 			children = (
 				0C93C31222EBA3E100A5973B /* AbrilFatface-Regular.otf */,
 				0C93C33C22ECA71400A5973B /* Allura */,
-				0C93C33A22ECA6D500A5973B /* riffic-bold.ttf */,
-				0C93C31922EBA44C00A5973B /* Bebas Neue */,
-				0C93C31422EBA44C00A5973B /* Caviar Dreams */,
-				0C93C31D22EBA44C00A5973B /* Dancing Script */,
-				0C93C31822EBA44C00A5973B /* Geometria */,
-				0C93C32122EBA44C00A5973B /* Intro */,
-				0C93C31522EBA44C00A5973B /* kaushan-script */,
-				0C93C32022EBA44C00A5973B /* Learning Curve */,
-				0C93C31722EBA44C00A5973B /* Lobster */,
-				0C93C31E22EBA44C00A5973B /* Nexa Rust */,
-				0C93C31F22EBA44C00A5973B /* Pacifico */,
-				0C93C31C22EBA44C00A5973B /* Playfair */,
-				0C93C31B22EBA44C00A5973B /* Sofia */,
+				0C86EC6F22F3D2F50004D4AE /* BebasNeue */,
+				0C86EC9422F3D3A70004D4AE /* Caviar Dreams */,
+				0C86EC9922F3D3A70004D4AE /* Dancing Script */,
+				0C86EC9222F3D3A70004D4AE /* Geometria */,
+				0C86EC8C22F3D3A70004D4AE /* Intro */,
+				0C86EC9B22F3D3A70004D4AE /* kaushan-script */,
+				0C86EC9D22F3D3A80004D4AE /* Learning Curve */,
+				0C86EC9022F3D3A70004D4AE /* Lobster */,
+				0C86ECA222F3D3A80004D4AE /* Nexa Rust */,
+				0C86EC7D22F3D3A70004D4AE /* Pacifico */,
+				0C86EC7F22F3D3A70004D4AE /* Playfair */,
+				0C86EC6E22F3D2C00004D4AE /* Riffic */,
+				0C86ECC722F3D3BC0004D4AE /* Sofia */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
@@ -205,6 +386,7 @@
 				0C93C33622EBAC9200A5973B /* LettyTemplateCollectionViewCell.swift */,
 				0C86EC5722ECCCC90004D4AE /* LettyBgCollectionViewCell.swift */,
 				0C86EC6822F21FAA0004D4AE /* ColorPickerCollectionViewCell.swift */,
+				0C86EC6C22F3ABD20004D4AE /* FontPickerCollectionViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -345,23 +527,48 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0C93C32922EBA44C00A5973B /* Sofia in Resources */,
+				0C86ECB622F3D3A80004D4AE /* introheadr-base.otf in Resources */,
+				0C86ECAC22F3D3A80004D4AE /* PlayfairDisplaySC-Black.otf in Resources */,
+				0C86ECC222F3D3A80004D4AE /* learning_curve_bold_ot_ps.otf in Resources */,
+				0C86ECC322F3D3A80004D4AE /* NexaRustHandmade-Extended-Free.otf in Resources */,
 				0CFD8C0522E9E97A001F3837 /* LaunchScreen.storyboard in Resources */,
-				0C93C32522EBA44C00A5973B /* Lobster in Resources */,
-				0C93C32E22EBA44C00A5973B /* Learning Curve in Resources */,
-				0C93C32C22EBA44C00A5973B /* Nexa Rust in Resources */,
-				0C93C32A22EBA44C00A5973B /* Playfair in Resources */,
+				0C86EC7B22F3D3850004D4AE /* BebasNeue-Regular.otf in Resources */,
+				0C86ECC922F3D3BC0004D4AE /* Sofia-Regular.otf in Resources */,
+				0C86ECC422F3D3A80004D4AE /* NexaRustSlab-BlackShadow01-Free.otf in Resources */,
+				0C86ECC522F3D3A80004D4AE /* NexaRustScriptL-0-Free.otf in Resources */,
+				0C86ECB922F3D3A80004D4AE /* CaviarDreams-Bold.ttf in Resources */,
+				0C86ECBD22F3D3A80004D4AE /* DancingScript-Regular.otf in Resources */,
+				0C86EC7C22F3D3880004D4AE /* BebasNeue-Thin.otf in Resources */,
+				0C86ECA722F3D3A80004D4AE /* Pacifico.ttf in Resources */,
+				0C86ECB222F3D3A80004D4AE /* PlayfairDisplay-Regular.otf in Resources */,
+				0C86ECB522F3D3A80004D4AE /* introrustg-base2line.otf in Resources */,
+				0C86ECA922F3D3A80004D4AE /* PlayfairDisplay-BoldItalic.otf in Resources */,
+				0C86ECAE22F3D3A80004D4AE /* PlayfairDisplaySC-BoldItalic.otf in Resources */,
+				0C86ECAF22F3D3A80004D4AE /* PlayfairDisplay-BlackItalic.otf in Resources */,
 				0C93C33B22ECA6D800A5973B /* riffic-bold.ttf in Resources */,
-				0C93C32B22EBA44C00A5973B /* Dancing Script in Resources */,
-				0C93C32F22EBA44C00A5973B /* Intro in Resources */,
-				0C93C32722EBA44C00A5973B /* Bebas Neue in Resources */,
+				0C86EC7A22F3D3820004D4AE /* BebasNeue-Light.otf in Resources */,
+				0C86ECB322F3D3A80004D4AE /* PlayfairDisplay-Italic.otf in Resources */,
+				0C86ECC022F3D3A80004D4AE /* learning_curve_regular_ot_ps.otf in Resources */,
 				0CFD8C0222E9E97A001F3837 /* Assets.xcassets in Resources */,
+				0C86ECA822F3D3A80004D4AE /* PlayfairDisplaySC-Regular.otf in Resources */,
+				0C86ECB122F3D3A80004D4AE /* PlayfairDisplaySC-BlackItalic.otf in Resources */,
+				0C86ECB722F3D3A80004D4AE /* Lobster.otf in Resources */,
+				0C86ECB022F3D3A80004D4AE /* PlayfairDisplay-Black.otf in Resources */,
 				0C93C31322EBA3E100A5973B /* AbrilFatface-Regular.otf in Resources */,
-				0C93C32322EBA44C00A5973B /* kaushan-script in Resources */,
-				0C93C32622EBA44C00A5973B /* Geometria in Resources */,
-				0C93C32222EBA44C00A5973B /* Caviar Dreams in Resources */,
-				0C93C32D22EBA44C00A5973B /* Pacifico in Resources */,
+				0C86ECAD22F3D3A80004D4AE /* PlayfairDisplay-Bold.otf in Resources */,
+				0C86ECBE22F3D3A80004D4AE /* KaushanScript-Regular.otf in Resources */,
+				0C86EC7822F3D36F0004D4AE /* BebasNeue-Bold.otf in Resources */,
+				0C86ECC622F3D3A80004D4AE /* NexaRustSans-Black-Free.otf in Resources */,
+				0C86ECBA22F3D3A80004D4AE /* CaviarDreams-BoldItalic.ttf in Resources */,
+				0C86ECB422F3D3A80004D4AE /* introscriptr-h2base.otf in Resources */,
+				0C86ECAB22F3D3A80004D4AE /* PlayfairDisplaySC-Italic.otf in Resources */,
+				0C86ECBC22F3D3A80004D4AE /* CaviarDreams-Italic.ttf in Resources */,
+				0C86ECBF22F3D3A80004D4AE /* learning_curve_dashed_ot_ps.otf in Resources */,
+				0C86ECBB22F3D3A80004D4AE /* CaviarDreams-Regular.ttf in Resources */,
+				0C86ECB822F3D3A80004D4AE /* geometria-light.otf in Resources */,
+				0C86ECAA22F3D3A80004D4AE /* PlayfairDisplaySC-Bold.otf in Resources */,
 				0C93C33922ECA66F00A5973B /* Allura-Regular.otf in Resources */,
+				0C86EC7922F3D3800004D4AE /* BebasNeue-Book.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -384,6 +591,7 @@
 				0C86EC5622ECBF030004D4AE /* LettyTemplateViewController.swift in Sources */,
 				0C93C31022EBA33A00A5973B /* Colors.swift in Sources */,
 				0C93C33722EBAC9200A5973B /* LettyTemplateCollectionViewCell.swift in Sources */,
+				0C86EC6D22F3ABD30004D4AE /* FontPickerCollectionViewCell.swift in Sources */,
 				0C93C30A22EB8B3600A5973B /* PropertyConcatente.swift in Sources */,
 				0CFD8C2022EB79F3001F3837 /* CGFloatExtension.swift in Sources */,
 				0C93C33122EBAA2600A5973B /* Fonts.swift in Sources */,

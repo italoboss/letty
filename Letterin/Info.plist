@@ -23,7 +23,7 @@
 		<string>NexaRustScriptL-0-Free.otf</string>
 		<string>NexaRustSans-Black-Free.otf</string>
 		<string>NexaRustHandmade-Extended-Free.otf</string>
-		<string>Lobster_1.3.otf</string>
+		<string>Lobster.otf</string>
 		<string>learning_curve_regular_ot_ps.otf</string>
 		<string>learning_curve_dashed_ot_ps.otf</string>
 		<string>learning_curve_bold_ot_ps.otf</string>
@@ -33,10 +33,10 @@
 		<string>introheadr-base.otf</string>
 		<string>geometria-light.otf</string>
 		<string>DancingScript-Regular.otf</string>
-		<string>CaviarDreams.ttf</string>
-		<string>Caviar_Dreams_BoldItalic.ttf</string>
-		<string>Caviar_Dreams_Italic.ttf</string>
-		<string>Caviar_Dreams_Bold.ttf</string>
+		<string>CaviarDreams-Regular.ttf</string>
+		<string>CaviarDreams-BoldItalic.ttf</string>
+		<string>CaviarDreams-Italic.ttf</string>
+		<string>CaviarDreams-Bold.ttf</string>
 		<string>BebasNeue-Thin.otf</string>
 		<string>BebasNeue-Regular.otf</string>
 		<string>BebasNeue-Light.otf</string>

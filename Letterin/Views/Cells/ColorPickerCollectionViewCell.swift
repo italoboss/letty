@@ -43,9 +43,9 @@ class ColorPickerCollectionViewCell: UICollectionViewCell {
         colorView.backgroundColor = color
         
         colorView.layer.shadowColor = UIColor.clear.cgColor
-        colorView.layer.shadowOpacity = 0.2
-        colorView.layer.shadowOffset = CGSize(width: 0, height: 1.0)
-        colorView.layer.shadowPath = UIBezierPath(roundedRect: self.bounds, cornerRadius: size/2).cgPath
+        colorView.layer.shadowOpacity = 0.4
+        colorView.layer.shadowOffset = CGSize(width: 0, height: 2)
+        colorView.layer.shadowPath = UIBezierPath(roundedRect: CGRect(x: 0, y: 0, width: size, height: size), cornerRadius: size/2).cgPath
         
         self.contentView.addSubview(colorView)
         colorView.anchor(centerX: centerXAnchor, centerY: centerYAnchor, width: size, height: size)

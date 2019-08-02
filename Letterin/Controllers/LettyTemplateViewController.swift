@@ -8,15 +8,9 @@
 
 import UIKit
 
-protocol LettyTemplateViewControllerDelegate: NSObjectProtocol {
-    func lettyTemplate(didSelect background: UIImage)
-}
-
 class LettyTemplateViewController: UIViewController {
-    weak var delegate: LettyTemplateViewControllerDelegate?
     
     var templateView: UIImageView? = nil
-    
     let closeButton = UIButton()
     var backgroundsCollection: UICollectionView?
     let reusableCellIdentifier = "LettyBgCell"
@@ -109,9 +103,7 @@ extension LettyTemplateViewController: UICollectionViewDataSource {
 extension LettyTemplateViewController: UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print("Select index \(indexPath.row)")
         let bg = backgrounds[indexPath.row]
-        //delegate?.lettyTemplate(didSelect: bg.coverImage)
         templateView?.image = bg.coverImage
     }
     
