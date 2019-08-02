@@ -77,20 +77,29 @@ class LetteringSectionView: UIView {
         
         let centerLayerY = layer.frame.midY
         
+        let dx: CGFloat = -15
         for c in 0..<text.length {
             let letter = text.attributedSubstring(from: NSRange(c..<c+1))
-            let charSize = letter.boundingRect(
+            let realCharSize = letter.boundingRect(
                 with: CGSize(width: .max, height: .max),
                 options: [.usesLineFragmentOrigin, .usesFontLeading],
                 context: nil)
                 .integral
                 .size
+            let charSize = letter.boundingRect(
+                with: CGSize(width: .max, height: .max),
+                options: [.usesLineFragmentOrigin, .usesFontLeading],
+                context: nil)
+                .insetBy(dx: dx, dy: 0)
+                .size
             
-            let letterAngle = (charSize.width / perimeter) * textDirection
-            let x = radius * cos(radAngle + (letterAngle / 2))
+            let charWidth = realCharSize.width
+            
+            let letterAngle = (charWidth / perimeter) * textDirection
+            let x = radius * cos(radAngle + (letterAngle / 2)) + dx
             let y = radius * sin(radAngle + (letterAngle / 2))
             
-            let xLetter = (layer.frame.size.width / 2) - (charSize.width / 2) + x
+            let xLetter = (layer.frame.size.width / 2) - (charWidth / 2) + x
             let yLetter = (layer.frame.size.height / 2) - (charSize.height / 2) + y
             
             let singleChar = drawText(
