@@ -31,22 +31,22 @@ class LettyTemplateViewController: UIViewController {
     let reusableCellIdentifier = "LettyBgCell"
     
     var backgrounds = [
-        LettyBg(coverImage: UIImage(named: "bg01")!),
-        LettyBg(coverImage: UIImage(named: "bg02")!),
-        LettyBg(coverImage: UIImage(named: "bg03")!),
-        LettyBg(coverImage: UIImage(named: "bg04")!),
-        LettyBg(coverImage: UIImage(named: "bg05")!),
-        LettyBg(coverImage: UIImage(named: "bg06")!),
-        LettyBg(coverImage: UIImage(named: "bg07")!),
-        LettyBg(coverImage: UIImage(named: "bg08")!),
-        LettyBg(coverImage: UIImage(named: "bg09")!),
-        LettyBg(coverImage: UIImage(named: "bg10")!),
-        LettyBg(coverImage: UIImage(named: "bg11")!),
-        LettyBg(coverImage: UIImage(named: "bg12")!),
-        LettyBg(coverImage: UIImage(named: "bg13")!),
-        LettyBg(coverImage: UIImage(named: "bg14")!),
-        LettyBg(coverImage: UIImage(named: "bg15")!),
-        LettyBg(coverImage: UIImage(named: "bg16")!)
+        LettyBg(coverImage: UIImage(named: "bg01")),
+        LettyBg(coverImage: UIImage(named: "bg02")),
+        LettyBg(coverImage: UIImage(named: "bg03")),
+        LettyBg(coverImage: UIImage(named: "bg04")),
+        LettyBg(coverImage: UIImage(named: "bg05")),
+        LettyBg(coverImage: UIImage(named: "bg06")),
+        LettyBg(coverImage: UIImage(named: "bg07")),
+        LettyBg(coverImage: UIImage(named: "bg08")),
+        LettyBg(coverImage: UIImage(named: "bg09")),
+        LettyBg(coverImage: UIImage(named: "bg10")),
+        LettyBg(coverImage: UIImage(named: "bg11")),
+        LettyBg(coverImage: UIImage(named: "bg12")),
+        LettyBg(coverImage: UIImage(named: "bg13")),
+        LettyBg(coverImage: UIImage(named: "bg14")),
+        LettyBg(coverImage: UIImage(named: "bg15")),
+        LettyBg(coverImage: UIImage(named: "bg16"))
     ]
 
     override func viewDidLoad() {

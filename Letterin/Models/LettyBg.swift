@@ -10,6 +10,6 @@ import UIKit
 
 struct LettyBg {
     
-    var coverImage: UIImage
+    var coverImage: UIImage?
     
 }

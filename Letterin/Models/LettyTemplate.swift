@@ -10,7 +10,7 @@ import UIKit
 
 struct LettyTemplate {
     
-    var coverImage: UIImage
+    var coverImage: UIImage?
     var template: UIImageView.Type
     
 }

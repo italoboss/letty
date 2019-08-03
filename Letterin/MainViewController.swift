@@ -15,9 +15,9 @@ class MainViewController: UIViewController {
     let reusableCellIdentifier = "LettyTemplateCell"
     
     let templates = [
-        LettyTemplate(coverImage: UIImage(named: "model5")!, template: SimpleOneTemplate.self),
-        LettyTemplate(coverImage: UIImage(named: "model2")!, template: CenterCurvedOneTemplate.self),
-        LettyTemplate(coverImage: UIImage(named: "model1")!, template: CenterCurvedTwoTemplate.self)
+        LettyTemplate(coverImage: UIImage(named: "model5"), template: SimpleOneTemplate.self),
+        LettyTemplate(coverImage: UIImage(named: "model2"), template: CenterCurvedOneTemplate.self),
+        LettyTemplate(coverImage: UIImage(named: "model1"), template: CenterCurvedTwoTemplate.self)
     ]
 
     override func viewDidLoad() {
