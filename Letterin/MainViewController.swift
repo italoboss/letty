@@ -15,9 +15,11 @@ class MainViewController: UIViewController {
     let reusableCellIdentifier = "LettyTemplateCell"
     
     let templates = [
+        LettyTemplate(coverImage: UIImage(named: "model6"), template: BasicOneTemplate.self),
         LettyTemplate(coverImage: UIImage(named: "model5"), template: SimpleOneTemplate.self),
         LettyTemplate(coverImage: UIImage(named: "model2"), template: CenterCurvedOneTemplate.self),
-        LettyTemplate(coverImage: UIImage(named: "model1"), template: CenterCurvedTwoTemplate.self)
+        LettyTemplate(coverImage: UIImage(named: "model1"), template: CenterCurvedTwoTemplate.self),
+        LettyTemplate(coverImage: UIImage(named: "model3"), template: CircleOneTemplate.self)
     ]
 
     override func viewDidLoad() {
@@ -87,7 +89,7 @@ extension MainViewController: UICollectionViewDelegate {
         let model = templates[indexPath.row]
         let destination = LettyTemplateViewController()
         destination.templateView = model.template.init()
-        // Used for layout templates
+        // Comment used for layout new templates
 //        destination.templateView?.image = model.coverImage
         present(destination, animated: true, completion: nil)
     }
