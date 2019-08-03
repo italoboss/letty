@@ -10,6 +10,7 @@ import UIKit
 
 class EditSectionViewController: UIViewController {
 
+    // MARK: - Components
     var section: LetteringSectionView? = nil
     
     let editTextView = UITextField()
@@ -30,6 +31,7 @@ class EditSectionViewController: UIViewController {
     var colorPickerCollection: UICollectionView?
     var fontPickerCollection: UICollectionView?
     
+    // MARK: -  Properties
     let colorCellIdentifier = "LettyColorCell"
     let fontCellIdentifier = "LettyFontCell"
     
@@ -45,7 +47,7 @@ class EditSectionViewController: UIViewController {
     private let fontSize: CGFloat = 24.0
     private var selectedFontName = Fonts.abrilRegular.name
     
-    
+    // MARK: - Initializers
     init(section: LetteringSectionView?) {
         super.init(nibName: nil, bundle: Bundle.main)
         self.section = section
@@ -55,6 +57,7 @@ class EditSectionViewController: UIViewController {
         super.init(coder: aDecoder)
     }
     
+    // MARK: - View setup functions
     override func viewDidLoad() {
         super.viewDidLoad()
         setupCollectionView()
@@ -142,6 +145,7 @@ class EditSectionViewController: UIViewController {
         fontPickerCollection = fontsCollectionView
     }
     
+    // MARK: - Actions
     @objc func didTapDone() {
         editTextView.resignFirstResponder()
         if let section = section {
@@ -154,6 +158,7 @@ class EditSectionViewController: UIViewController {
     
 }
 
+// MARK: - CollectionView - Data Source
 extension EditSectionViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -179,6 +184,7 @@ extension EditSectionViewController: UICollectionViewDataSource {
     
 }
 
+// MARK: - CollectionView - Delegate
 extension EditSectionViewController: UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
