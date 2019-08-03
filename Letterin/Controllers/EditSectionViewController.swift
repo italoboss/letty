@@ -44,7 +44,7 @@ class EditSectionViewController: UIViewController {
     private var allFontsName: [String] {
         return Fonts.allCases.map { $0.name }
     }
-    private let fontSize: CGFloat = 24.0
+    private let fontSize: CGFloat = 32
     private var selectedFontName = Fonts.abrilRegular.name
     
     // MARK: - Initializers

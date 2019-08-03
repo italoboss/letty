@@ -88,7 +88,7 @@ extension MainViewController: UICollectionViewDelegate {
         let destination = LettyTemplateViewController()
         destination.templateView = model.template.init()
         // Used for layout templates
-        destination.templateView?.image = model.coverImage
+//        destination.templateView?.image = model.coverImage
         present(destination, animated: true, completion: nil)
     }
     
