@@ -191,6 +191,7 @@ extension EditSectionViewController: UICollectionViewDelegate {
         if collectionView == colorPickerCollection {
             let color = allColors[indexPath.row]
             editTextView.textColor = color
+            self.view.backgroundColor = color.isLight ? Colors.darkGrey.value : Colors.greyWhite.value
         }
         else if collectionView == fontPickerCollection {
             let fontName = allFontsName[indexPath.row]

@@ -52,6 +52,7 @@
 		0C86ECC622F3D3A80004D4AE /* NexaRustSans-Black-Free.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0C86ECA622F3D3A80004D4AE /* NexaRustSans-Black-Free.otf */; };
 		0C86ECC922F3D3BC0004D4AE /* Sofia-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0C86ECC822F3D3BC0004D4AE /* Sofia-Regular.otf */; };
 		0C86ECCC22F4AD900004D4AE /* CenterCurvedOneTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C86ECCB22F4AD900004D4AE /* CenterCurvedOneTemplate.swift */; };
+		0C86ECCE22F51B490004D4AE /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C86ECCD22F51B490004D4AE /* UIColorExtension.swift */; };
 		0C93C30622EB892F00A5973B /* SimpleOneTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C93C30522EB892F00A5973B /* SimpleOneTemplate.swift */; };
 		0C93C30822EB8B1200A5973B /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C93C30722EB8B1200A5973B /* UIViewExtension.swift */; };
 		0C93C30A22EB8B3600A5973B /* PropertyConcatente.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C93C30922EB8B3600A5973B /* PropertyConcatente.swift */; };
@@ -129,6 +130,7 @@
 		0C86ECA622F3D3A80004D4AE /* NexaRustSans-Black-Free.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NexaRustSans-Black-Free.otf"; sourceTree = "<group>"; };
 		0C86ECC822F3D3BC0004D4AE /* Sofia-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Sofia-Regular.otf"; sourceTree = "<group>"; };
 		0C86ECCB22F4AD900004D4AE /* CenterCurvedOneTemplate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenterCurvedOneTemplate.swift; sourceTree = "<group>"; };
+		0C86ECCD22F51B490004D4AE /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		0C93C30522EB892F00A5973B /* SimpleOneTemplate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleOneTemplate.swift; sourceTree = "<group>"; };
 		0C93C30722EB8B1200A5973B /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		0C93C30922EB8B3600A5973B /* PropertyConcatente.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyConcatente.swift; sourceTree = "<group>"; };
@@ -327,6 +329,7 @@
 				0C93C30922EB8B3600A5973B /* PropertyConcatente.swift */,
 				0C93C30722EB8B1200A5973B /* UIViewExtension.swift */,
 				0C86EC6A22F35EFF0004D4AE /* PropertyLoopable.swift */,
+				0C86ECCD22F51B490004D4AE /* UIColorExtension.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -605,6 +608,7 @@
 				0C86EC5A22ECCDAB0004D4AE /* LettyBg.swift in Sources */,
 				0C86EC6622F1F4980004D4AE /* EditSectionViewController.swift in Sources */,
 				0CFD8C2522EB7F6C001F3837 /* LetteringTemplate.swift in Sources */,
+				0C86ECCE22F51B490004D4AE /* UIColorExtension.swift in Sources */,
 				0C86ECCC22F4AD900004D4AE /* CenterCurvedOneTemplate.swift in Sources */,
 				0C93C30622EB892F00A5973B /* SimpleOneTemplate.swift in Sources */,
 			);

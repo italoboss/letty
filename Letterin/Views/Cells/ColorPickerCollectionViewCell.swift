@@ -16,13 +16,14 @@ class ColorPickerCollectionViewCell: UICollectionViewCell {
     var color: UIColor = .darkGray {
         didSet {
             colorView.backgroundColor = color
+            colorView.layer.borderColor = color.isLight ? Colors.primary.value.cgColor : UIColor.white.cgColor
             setNeedsDisplay()
         }
     }
     
     override var isSelected: Bool {
         didSet {
-            colorView.layer.borderWidth = isSelected ? 3 : 0
+            colorView.layer.borderWidth = isSelected ? 4 : 0
             colorView.layer.shadowColor = isSelected ? UIColor.black.cgColor : UIColor.clear.cgColor
         }
     }
