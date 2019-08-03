@@ -46,7 +46,7 @@ class MainViewController: UIViewController {
         
         titleLabel.text = "Letty"
         titleLabel.font = UIFont(name: Fonts.abrilRegular.name, size: 48)
-        titleLabel.textColor = Colors.primary
+        titleLabel.textColor = Colors.primary.value
         titleLabel.anchor(top: view.layoutMarginsGuide.topAnchor, left: view.layoutMarginsGuide.leftAnchor,
                           paddingTop: 32)
         

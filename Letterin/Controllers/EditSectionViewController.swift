@@ -17,7 +17,7 @@ class EditSectionViewController: UIViewController {
         let button = UIButton()
         button.setTitle("Done", for: .normal)
         button.titleLabel?.font = UIFont(name: Fonts.abrilRegular.name, size: 17)
-        button.setTitleColor(Colors.primary, for: .normal)
+        button.setTitleColor(Colors.primary.value, for: .normal)
         button.addTarget(self, action: #selector(didTapDone), for: .touchUpInside)
         return button
     }()
@@ -33,6 +33,9 @@ class EditSectionViewController: UIViewController {
     let colorCellIdentifier = "LettyColorCell"
     let fontCellIdentifier = "LettyFontCell"
     
+    private var allColors: [UIColor] {
+        return Colors.allCases.map { $0.value }
+    }
     private var allFontsToCell: [UIFont?] {
         return Fonts.allCases.map { $0.fontToCell }
     }
@@ -61,7 +64,7 @@ class EditSectionViewController: UIViewController {
     func setupLayout() {
         view.addSubview(doneButton)
         view.addSubview(editTextView)
-        self.view.backgroundColor = Colors.greyWhite
+        self.view.backgroundColor = Colors.greyWhite.value
         
         doneButton.anchor(top: view.layoutMarginsGuide.topAnchor, right: view.layoutMarginsGuide.rightAnchor,
                            paddingTop: 16)
@@ -69,7 +72,7 @@ class EditSectionViewController: UIViewController {
         editTextView.placeholder = "Type something"
         editTextView.textAlignment = .center
         editTextView.font = UIFont(name: allFontsName.first ?? ".SFUIDisplay", size: fontSize)
-        editTextView.textColor = Colors.all.first
+        editTextView.textColor = allColors.first
         editTextView.becomeFirstResponder()
         editTextView.anchor(left: view.layoutMarginsGuide.leftAnchor, right: view.layoutMarginsGuide.rightAnchor, centerY: view.centerYAnchor, paddingLeft: 16, paddingBottom: 140, paddingRight: 16)
         
@@ -79,7 +82,7 @@ class EditSectionViewController: UIViewController {
             editTextView.text = section.text
             if let textColor = section.textColor {
                 editTextView.textColor = textColor
-                selectedColorIndex = Colors.all.firstIndex(of: textColor) ?? 0
+                selectedColorIndex = allColors.firstIndex(of: textColor) ?? 0
             }
             if let fontName = section.fontName {
                 selectedFontName = fontName
@@ -154,13 +157,13 @@ class EditSectionViewController: UIViewController {
 extension EditSectionViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return collectionView == colorPickerCollection ? Colors.all.count : allFontsName.count
+        return collectionView == colorPickerCollection ? allColors.count : allFontsName.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
 
         if collectionView == colorPickerCollection, let cell = collectionView.dequeueReusableCell(withReuseIdentifier: colorCellIdentifier, for: indexPath) as? ColorPickerCollectionViewCell {
-            let color = Colors.all[indexPath.row]
+            let color = allColors[indexPath.row]
             cell.color = color
             return cell
         }
@@ -180,7 +183,7 @@ extension EditSectionViewController: UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if collectionView == colorPickerCollection {
-            let color = Colors.all[indexPath.row]
+            let color = allColors[indexPath.row]
             editTextView.textColor = color
         }
         else if collectionView == fontPickerCollection {

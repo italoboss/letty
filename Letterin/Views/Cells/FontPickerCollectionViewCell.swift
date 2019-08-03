@@ -22,7 +22,7 @@ class FontPickerCollectionViewCell: UICollectionViewCell {
     
     override var isSelected: Bool {
         didSet {
-            fontView.backgroundColor = isSelected ? Colors.primary : .white
+            fontView.backgroundColor = isSelected ? Colors.primary.value : .white
             fontLabel.textColor = isSelected ? .white : .black
         }
     }

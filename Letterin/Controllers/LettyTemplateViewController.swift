@@ -15,7 +15,7 @@ class LettyTemplateViewController: UIViewController {
     let closeButton: UIButton = {
         let button = UIButton()
         button.setTitle("X", for: .normal)
-        button.setTitleColor(Colors.primary, for: .normal)
+        button.setTitleColor(Colors.primary.value, for: .normal)
         button.addTarget(self, action: #selector(didTapClose), for: .touchUpInside)
         return button
     }()
@@ -23,7 +23,7 @@ class LettyTemplateViewController: UIViewController {
         let button = UIButton()
         button.setTitle("Share", for: .normal)
         button.titleLabel?.font = UIFont(name: Fonts.abrilRegular.name, size: 17)
-        button.setTitleColor(Colors.primary, for: .normal)
+        button.setTitleColor(Colors.primary.value, for: .normal)
         button.addTarget(self, action: #selector(didTapShare), for: .touchUpInside)
         return button
     }()
