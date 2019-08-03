@@ -57,13 +57,36 @@ class EditSectionViewController: UIViewController {
         super.init(coder: aDecoder)
     }
     
-    // MARK: - View setup functions
+    // MARK: - View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         setupCollectionView()
         setupLayout()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        var selectedColorIndex = 0
+        var selectedFontIndex = 0
+        if let section = section {
+            if let textColor = section.textColor {
+                selectedColorIndex = allColors.firstIndex(of: textColor) ?? 0
+            }
+            if let fontName = section.fontName {
+                selectedFontIndex = allFontsName.firstIndex(of: fontName) ?? 0
+            }
+        }
+        
+        if let colorCollection = colorPickerCollection, let fontCollection = fontPickerCollection {
+            if !allColors.isEmpty {
+                colorCollection.selectItem(at: IndexPath(row: selectedColorIndex, section: 0), animated: true, scrollPosition: .left)
+            }
+            if !allFontsName.isEmpty {
+                fontCollection.selectItem(at: IndexPath(row: selectedFontIndex, section: 0), animated: true, scrollPosition: .left)
+            }
+        }
+    }
+    
+    // MARK: - View setup functions
     func setupLayout() {
         view.addSubview(doneButton)
         view.addSubview(editTextView)
@@ -79,18 +102,17 @@ class EditSectionViewController: UIViewController {
         editTextView.becomeFirstResponder()
         editTextView.anchor(left: view.layoutMarginsGuide.leftAnchor, right: view.layoutMarginsGuide.rightAnchor, centerY: view.centerYAnchor, paddingLeft: 16, paddingBottom: 140, paddingRight: 16)
         
-        var selectedColorIndex = 0
-        var selectedFontIndex = 0
         if let section = section {
             editTextView.text = section.text
             if let textColor = section.textColor {
                 editTextView.textColor = textColor
-                selectedColorIndex = allColors.firstIndex(of: textColor) ?? 0
+                if textColor.isLight {
+                    self.view.backgroundColor = Colors.darkGrey.value
+                }
             }
             if let fontName = section.fontName {
                 selectedFontName = fontName
                 editTextView.font = UIFont(name: fontName, size: fontSize)
-                selectedFontIndex = allFontsName.firstIndex(of: fontName) ?? 0
             }
         }
         
@@ -103,13 +125,9 @@ class EditSectionViewController: UIViewController {
             
             colorCollection.anchor(top: accessory.topAnchor, left: accessory.leftAnchor, right: accessory.rightAnchor, height: 50)
             colorCollection.showsHorizontalScrollIndicator = false
-            colorCollection.selectItem(at: IndexPath(row: selectedColorIndex, section: 0), animated: false, scrollPosition: UICollectionView.ScrollPosition.centeredHorizontally)
             
             fontCollection.anchor(left: accessory.leftAnchor, bottom: accessory.bottomAnchor, right: accessory.rightAnchor, height: 40)
             fontCollection.showsHorizontalScrollIndicator = false
-            if !allFontsName.isEmpty {
-                fontCollection.selectItem(at: IndexPath(row: selectedFontIndex, section: 0), animated: false, scrollPosition: UICollectionView.ScrollPosition.centeredHorizontally)
-            }
             
             editTextView.inputAccessoryView = accessory
         }
@@ -127,6 +145,7 @@ class EditSectionViewController: UIViewController {
         colorsCollectionView.dataSource = self
         colorsCollectionView.delegate = self
         colorsCollectionView.backgroundColor = .clear
+        
         
         
         let fontCollectionlayout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
