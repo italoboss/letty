@@ -1,5 +1,5 @@
 //
-//  CenterCurvedOneTemplate.swift
+//  CenterCurvedTwoTemplate.swift
 //  Letterin
 //
 //  Created by Italo Boss on 02/08/19.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CenterCurvedOneTemplate: UIImageView {
+class CenterCurvedTwoTemplate: UIImageView {
 
     var topSmallSection = LetteringSectionView()
     var topSection = LetteringSectionView()
@@ -38,21 +38,23 @@ class CenterCurvedOneTemplate: UIImageView {
         self.addSubview(bottomSmallSection)
         self.addSubview(bottomSection)
         
-        topSmallSection.anchor(centerX: centerXAnchor, centerY: centerYAnchor, paddingBottom: 150, width: 250, height: 60)
+        topSmallSection.anchor(centerX: centerXAnchor, centerY: centerYAnchor, paddingBottom: 160, width: 250, height: 60)
         topSection.anchor(centerX: centerXAnchor, centerY: centerYAnchor, paddingBottom: 100, width: 100, height: 30)
-        centerCurvedSection.anchor(centerX: centerXAnchor, centerY: centerYAnchor, paddingBottom: 10, width: 250, height: 60)
+        centerCurvedSection.anchor(centerX: centerXAnchor, centerY: centerYAnchor, width: 250, height: 60)
         bottomSmallSection.anchor(centerX: centerXAnchor, centerY: centerYAnchor, paddingTop: 90, width: 220, height: 60)
-        bottomSection.anchor(centerX: centerXAnchor, centerY: centerYAnchor, paddingTop: 140, width: 220, height: 60)
-
+        bottomSection.anchor(centerX: centerXAnchor, centerY: centerYAnchor, paddingTop: 150, width: 220, height: 60)
+        
         topSmallSection.radius = 10000
         
         topSection.fontSize = 42.0
         topSection.radius = 10000
         
-        centerCurvedSection.radius = 220
+        centerCurvedSection.angle = 90
+        centerCurvedSection.radius = 260
         centerCurvedSection.fontSize = 60.0
         
         bottomSmallSection.radius = 10000
+        bottomSmallSection.fontSize = 46.0
         
         bottomSection.radius = 10000
         bottomSection.fontSize = 42.0

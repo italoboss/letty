@@ -58,8 +58,8 @@ class LettyTemplateViewController: UIViewController {
     
     func setupLayout() {
         // Used for layout templates
-        // templateView?.contentMode = .scaleAspectFit
-        templateView?.contentMode = .scaleAspectFill
+         templateView?.contentMode = .scaleAspectFit
+//        templateView?.contentMode = .scaleAspectFill
         view.backgroundColor = .white
         
         if let template = templateView {

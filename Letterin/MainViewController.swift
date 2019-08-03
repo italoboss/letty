@@ -16,7 +16,8 @@ class MainViewController: UIViewController {
     
     let templates = [
         LettyTemplate(coverImage: UIImage(named: "model5")!, template: SimpleOneTemplate.self),
-        LettyTemplate(coverImage: UIImage(named: "model2")!, template: CenterCurvedOneTemplate.self)
+        LettyTemplate(coverImage: UIImage(named: "model2")!, template: CenterCurvedOneTemplate.self),
+        LettyTemplate(coverImage: UIImage(named: "model1")!, template: CenterCurvedTwoTemplate.self)
     ]
 
     override func viewDidLoad() {
@@ -87,7 +88,7 @@ extension MainViewController: UICollectionViewDelegate {
         let destination = LettyTemplateViewController()
         destination.templateView = model.template.init()
         // Used for layout templates
-        // destination.templateView?.image = model.coverImage
+        destination.templateView?.image = model.coverImage
         present(destination, animated: true, completion: nil)
     }
     

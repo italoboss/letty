@@ -29,7 +29,7 @@ class LetteringSectionView: UIView {
     var fontName: String? = nil {
         didSet { setNeedsDisplay() }
     }
-    var fontSize: CGFloat = 21 {
+    var fontSize: CGFloat = 28 {
         didSet { setNeedsDisplay() }
     }
     
@@ -63,7 +63,7 @@ class LetteringSectionView: UIView {
         var textRotation: CGFloat = 0
         var textDirection: CGFloat = 0
         
-        if angle > CGFloat(10).radians, angle < CGFloat(170).radians {
+        if angle > CGFloat(10), angle < CGFloat(170) {
             // bottom string
             textRotation = 0.5 * .pi
             textDirection = -2 * .pi
@@ -106,7 +106,7 @@ class LetteringSectionView: UIView {
                 text: letter,
                 frame: CGRect(
                     x: xLetter,
-                    y: yLetter > centerLayerY ? yLetter - radius : yLetter + radius,
+                    y: yLetter > centerLayerY || textDirection < 0 ? yLetter - radius : yLetter + radius,
                     width: charSize.width,
                     height: charSize.height))
             layer.addSublayer(singleChar)
