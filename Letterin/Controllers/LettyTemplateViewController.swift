@@ -14,7 +14,8 @@ class LettyTemplateViewController: UIViewController {
     
     let closeButton: UIButton = {
         let button = UIButton()
-        button.setTitle("X", for: .normal)
+        button.setTitle("Cancel", for: .normal)
+        button.titleLabel?.font = UIFont(name: Fonts.abrilRegular.name, size: 17)
         button.setTitleColor(Colors.primary.value, for: .normal)
         button.addTarget(self, action: #selector(didTapClose), for: .touchUpInside)
         return button
