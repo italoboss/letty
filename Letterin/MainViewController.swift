@@ -89,6 +89,7 @@ extension MainViewController: UICollectionViewDelegate {
         let model = templates[indexPath.row]
         let destination = LettyTemplateViewController()
         destination.templateView = model.template.init()
+        destination.modalPresentationStyle = .fullScreen
         // Comment used for layout new templates
 //        destination.templateView?.image = model.coverImage
         present(destination, animated: true, completion: nil)

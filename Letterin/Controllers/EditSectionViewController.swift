@@ -95,7 +95,9 @@ class EditSectionViewController: UIViewController {
         doneButton.anchor(top: view.layoutMarginsGuide.topAnchor, right: view.layoutMarginsGuide.rightAnchor,
                            paddingTop: 16)
         
-        editTextView.placeholder = "Type something"
+        editTextView.attributedPlaceholder = NSAttributedString(string: "Type something", attributes: [
+            NSAttributedString.Key.foregroundColor: UIColor.gray.withAlphaComponent(0.5)
+        ])
         editTextView.textAlignment = .center
         editTextView.font = UIFont(name: allFontsName.first ?? ".SFUIDisplay", size: fontSize)
         editTextView.textColor = allColors.first

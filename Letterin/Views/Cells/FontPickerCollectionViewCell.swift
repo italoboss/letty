@@ -16,6 +16,7 @@ class FontPickerCollectionViewCell: UICollectionViewCell {
     var font: UIFont = UIFont.systemFont(ofSize: 17) {
         didSet {
             fontLabel.font = font
+            fontLabel.textColor = isSelected ? .white : .black
             setNeedsDisplay()
         }
     }
