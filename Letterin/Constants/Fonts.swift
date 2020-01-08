@@ -130,4 +130,8 @@ extension Fonts {
         return UIFont(name: self.name, size: 18)
     }
     
+    func withSize(_ size: CGFloat) -> UIFont {
+        return UIFont(name: self.name, size: size)!
+    }
+    
 }

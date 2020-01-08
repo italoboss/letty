@@ -66,6 +66,9 @@
 		0C93C33722EBAC9200A5973B /* LettyTemplateCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C93C33622EBAC9200A5973B /* LettyTemplateCollectionViewCell.swift */; };
 		0C93C33922ECA66F00A5973B /* Allura-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0C93C33822ECA66900A5973B /* Allura-Regular.otf */; };
 		0C93C33B22ECA6D800A5973B /* riffic-bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0C93C33A22ECA6D500A5973B /* riffic-bold.ttf */; };
+		0CAF601A23C64F8400D60062 /* Gallery.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0CAF601823C64F8400D60062 /* Gallery.xcdatamodeld */; };
+		0CAF601C23C651DC00D60062 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CAF601B23C651DC00D60062 /* CoreDataManager.swift */; };
+		0CAF601F23C6532C00D60062 /* ErrorHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CAF601E23C6532C00D60062 /* ErrorHandler.swift */; };
 		0CFD8BFB22E9E979001F3837 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CFD8BFA22E9E979001F3837 /* AppDelegate.swift */; };
 		0CFD8BFD22E9E979001F3837 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CFD8BFC22E9E979001F3837 /* MainViewController.swift */; };
 		0CFD8C0222E9E97A001F3837 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0CFD8C0122E9E97A001F3837 /* Assets.xcassets */; };
@@ -147,9 +150,12 @@
 		0C93C33622EBAC9200A5973B /* LettyTemplateCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LettyTemplateCollectionViewCell.swift; sourceTree = "<group>"; };
 		0C93C33822ECA66900A5973B /* Allura-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Allura-Regular.otf"; sourceTree = "<group>"; };
 		0C93C33A22ECA6D500A5973B /* riffic-bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "riffic-bold.ttf"; sourceTree = "<group>"; };
+		0CAF601923C64F8400D60062 /* Gallery.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Gallery.xcdatamodel; sourceTree = "<group>"; };
+		0CAF601B23C651DC00D60062 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		0CAF601E23C6532C00D60062 /* ErrorHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorHandler.swift; sourceTree = "<group>"; };
 		0CFD8BF722E9E979001F3837 /* Letterin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Letterin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0CFD8BFA22E9E979001F3837 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		0CFD8BFC22E9E979001F3837 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MainViewController.swift; path = ../MainViewController.swift; sourceTree = "<group>"; };
+		0CFD8BFC22E9E979001F3837 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		0CFD8C0122E9E97A001F3837 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0CFD8C0422E9E97A001F3837 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0CFD8C0622E9E97A001F3837 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -343,14 +349,14 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
-		0C93C30B22EB9C0000A5973B /* Controllers */ = {
+		0C93C30B22EB9C0000A5973B /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
 				0CFD8BFC22E9E979001F3837 /* MainViewController.swift */,
 				0C86EC5522ECBF030004D4AE /* LettyTemplateViewController.swift */,
 				0C86EC6522F1F4980004D4AE /* EditSectionViewController.swift */,
 			);
-			path = Controllers;
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 		0C93C30E22EBA32700A5973B /* Constants */ = {
@@ -412,6 +418,16 @@
 			path = Allura;
 			sourceTree = "<group>";
 		};
+		0CAF601D23C6530400D60062 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				0C93C30422EB889400A5973B /* Utils */,
+				0CAF601B23C651DC00D60062 /* CoreDataManager.swift */,
+				0CAF601E23C6532C00D60062 /* ErrorHandler.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
 		0CFD8BEE22E9E979001F3837 = {
 			isa = PBXGroup;
 			children = (
@@ -433,13 +449,14 @@
 		0CFD8BF922E9E979001F3837 /* Letterin */ = {
 			isa = PBXGroup;
 			children = (
+				0CAF601D23C6530400D60062 /* Common */,
 				0C93C33222EBAAC300A5973B /* Models */,
 				0C93C31122EBA34B00A5973B /* Fonts */,
 				0C93C30E22EBA32700A5973B /* Constants */,
-				0C93C30422EB889400A5973B /* Utils */,
 				0C86EC6722F1F50E0004D4AE /* Views */,
-				0C93C30B22EB9C0000A5973B /* Controllers */,
+				0C93C30B22EB9C0000A5973B /* ViewControllers */,
 				0CFD8BFA22E9E979001F3837 /* AppDelegate.swift */,
+				0CAF601823C64F8400D60062 /* Gallery.xcdatamodeld */,
 				0CFD8C0122E9E97A001F3837 /* Assets.xcassets */,
 				0CFD8C0322E9E97A001F3837 /* LaunchScreen.storyboard */,
 				0CFD8C0622E9E97A001F3837 /* Info.plist */,
@@ -609,12 +626,14 @@
 				0C93C30A22EB8B3600A5973B /* PropertyConcatente.swift in Sources */,
 				0CFD8C2022EB79F3001F3837 /* CGFloatExtension.swift in Sources */,
 				0C86ECD022F521B10004D4AE /* CenterCurvedTwoTemplate.swift in Sources */,
+				0CAF601A23C64F8400D60062 /* Gallery.xcdatamodeld in Sources */,
 				0C93C33122EBAA2600A5973B /* Fonts.swift in Sources */,
 				0CFD8BFD22E9E979001F3837 /* MainViewController.swift in Sources */,
 				0CFD8BFB22E9E979001F3837 /* AppDelegate.swift in Sources */,
 				0CFD8C1B22E9F523001F3837 /* CanvasView.swift in Sources */,
 				0CFD8C1D22EB791A001F3837 /* LetteringSectionView.swift in Sources */,
 				0C86EC6B22F35F000004D4AE /* PropertyLoopable.swift in Sources */,
+				0CAF601F23C6532C00D60062 /* ErrorHandler.swift in Sources */,
 				0C86EC5822ECCCC90004D4AE /* LettyBgCollectionViewCell.swift in Sources */,
 				0C86EC6922F21FAA0004D4AE /* ColorPickerCollectionViewCell.swift in Sources */,
 				0C86EC5A22ECCDAB0004D4AE /* LettyBg.swift in Sources */,
@@ -622,6 +641,7 @@
 				0CFD8C2522EB7F6C001F3837 /* LetteringTemplate.swift in Sources */,
 				0C86ECCE22F51B490004D4AE /* UIColorExtension.swift in Sources */,
 				0C86ECCC22F4AD900004D4AE /* CenterCurvedOneTemplate.swift in Sources */,
+				0CAF601C23C651DC00D60062 /* CoreDataManager.swift in Sources */,
 				0C93C30622EB892F00A5973B /* SimpleOneTemplate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -891,6 +911,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		0CAF601823C64F8400D60062 /* Gallery.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				0CAF601923C64F8400D60062 /* Gallery.xcdatamodel */,
+			);
+			currentVersion = 0CAF601923C64F8400D60062 /* Gallery.xcdatamodel */;
+			path = Gallery.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 0CFD8BEF22E9E979001F3837 /* Project object */;
 }
