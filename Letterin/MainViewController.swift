@@ -22,12 +22,19 @@ class MainViewController: UIViewController {
         LettyTemplate(coverImage: UIImage(named: "model3"), template: CircleOneTemplate.self)
     ]
 
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        if #available(iOS 13.0, *) {
+            return .darkContent
+        } else {
+            return .default
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("On MainViewController")
-        
         setupCollectionView()
         setupLayout()
+        self.setNeedsStatusBarAppearanceUpdate()
     }
     
     func setupCollectionView() {

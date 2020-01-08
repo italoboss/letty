@@ -49,7 +49,15 @@ class LettyTemplateViewController: UIViewController {
         LettyBg(coverImage: UIImage(named: "bg15")),
         LettyBg(coverImage: UIImage(named: "bg16"))
     ]
-
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        if #available(iOS 13.0, *) {
+            return .darkContent
+        } else {
+            return .default
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupCollectionView()
