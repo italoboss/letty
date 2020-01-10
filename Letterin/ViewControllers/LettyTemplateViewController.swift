@@ -20,6 +20,7 @@ class LettyTemplateViewController: UIViewController {
         button.addTarget(self, action: #selector(didTapClose), for: .touchUpInside)
         return button
     }()
+    
     let shareButton: UIButton = {
         let button = UIButton()
         button.setTitle("Share", for: .normal)
@@ -28,6 +29,16 @@ class LettyTemplateViewController: UIViewController {
         button.addTarget(self, action: #selector(didTapShare), for: .touchUpInside)
         return button
     }()
+    
+    let saveButton: UIButton = {
+        let button = UIButton()
+        button.setTitle("Save", for: .normal)
+        button.titleLabel?.font = UIFont(name: Fonts.abrilRegular.name, size: 17)
+        button.setTitleColor(Colors.primary.value, for: .normal)
+        button.addTarget(self, action: #selector(didTapSave), for: .touchUpInside)
+        return button
+    }()
+    
     var backgroundsCollection: UICollectionView?
     let reusableCellIdentifier = "LettyBgCell"
     
@@ -78,11 +89,11 @@ class LettyTemplateViewController: UIViewController {
         
         view.addSubview(closeButton)
         view.addSubview(shareButton)
+        view.addSubview(saveButton)
         
-        closeButton.anchor(top: view.layoutMarginsGuide.topAnchor, left: view.layoutMarginsGuide.leftAnchor,
-                            paddingTop: 16)
-        shareButton.anchor(top: view.layoutMarginsGuide.topAnchor, right: view.layoutMarginsGuide.rightAnchor,
-                           paddingTop: 16)
+        closeButton.anchor(top: view.layoutMarginsGuide.topAnchor, left: view.layoutMarginsGuide.leftAnchor, paddingTop: 16)
+        saveButton.anchor(top: view.layoutMarginsGuide.topAnchor, right: view.layoutMarginsGuide.rightAnchor, paddingTop: 16)
+        shareButton.anchor(top: view.layoutMarginsGuide.topAnchor, right: saveButton.leftAnchor, paddingTop: 16, paddingRight: 16)
         
         if let collection = backgroundsCollection {
             view.addSubview(collection)
@@ -131,6 +142,10 @@ class LettyTemplateViewController: UIViewController {
     
     @objc func didTapClose() {
         dismiss(animated: true, completion: nil)
+    }
+    
+    @objc func didTapSave() {
+        
     }
     
     @objc func didTapShare() {
