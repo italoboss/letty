@@ -423,6 +423,8 @@
 		0CAF601D23C6530400D60062 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				0C93C31122EBA34B00A5973B /* Fonts */,
+				0C93C30E22EBA32700A5973B /* Constants */,
 				0C93C30422EB889400A5973B /* Utils */,
 				0CAF601B23C651DC00D60062 /* CoreDataManager.swift */,
 				0CAF601E23C6532C00D60062 /* ErrorHandler.swift */,
@@ -454,8 +456,6 @@
 			children = (
 				0CAF601D23C6530400D60062 /* Common */,
 				0C93C33222EBAAC300A5973B /* Models */,
-				0C93C31122EBA34B00A5973B /* Fonts */,
-				0C93C30E22EBA32700A5973B /* Constants */,
 				0C86EC6722F1F50E0004D4AE /* Views */,
 				0C93C30B22EB9C0000A5973B /* ViewControllers */,
 				0CFD8BFA22E9E979001F3837 /* AppDelegate.swift */,
