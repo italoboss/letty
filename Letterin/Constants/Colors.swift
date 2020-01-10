@@ -8,7 +8,7 @@
 
 import UIKit
 
-enum Colors: CaseIterable {
+enum Colors: Int, CaseIterable {
     
     case primary
     

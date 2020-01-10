@@ -8,7 +8,7 @@
 
 import UIKit
 
-enum Fonts: CaseIterable {
+enum Fonts: Int, CaseIterable {
     
     case abrilRegular
     

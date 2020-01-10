@@ -33,11 +33,55 @@ struct LettyTemplate {
         }
     }
     
-    func loadByGallery() -> [LettyTemplate] {
+    func saveAtGallery() -> Bool {
+        let letty: Letty = CoreDataManager.shared.initManagedObject()
+        letty.kind = self.kind.rawValue
+        letty.createdAt = Date()
+        
+        if let cover = self.coverImage {
+            var path = AppConfig.LOCAL_IMAGES_PATH
+            let fileName = "\(self.kind.rawValue)_\(Date().description)"
+            path.append(contentsOf: fileName)
+            if FileManager.default.createFile(atPath: path, contents: cover.jpegData(compressionQuality: 1.0), attributes: [:]) {
+                letty.coverPath = fileName
+            }
+        }
+        
+        if let sections = self.sections {
+            letty.sections = NSSet(array: sections.compactMap { section -> Section? in
+                let result: Section = CoreDataManager.shared.initManagedObject()
+                result.text = section.text
+                result.color = Int64(section.color.rawValue)
+                result.font = Int64(section.font.rawValue)
+                return result
+            })
+        }
+        
+        return CoreDataManager.shared.saveContext()
+    }
+    
+    func loadAllAtGallery() -> [LettyTemplate] {
         let letties: [Letty] = CoreDataManager.shared.fecth() ?? []
         
         let result = letties.map { letty -> LettyTemplate in
-            return LettyTemplate(coverImage: nil, kind: Kind(rawValue: "") ?? .basicOne)
+            
+            var cover: UIImage? = nil
+            if let coverPath = letty.coverPath {
+                var path = AppConfig.LOCAL_IMAGES_PATH
+                path.append(coverPath)
+                cover = UIImage(contentsOfFile: path)
+            }
+            
+            let sections = letty.sections?.compactMap { sec -> LettySection? in
+                guard let section = sec as? Section else { return nil }
+                return LettySection(text: section.text ?? "", color: Colors(rawValue: Int(section.color)) ?? .primary, font: Fonts(rawValue: Int(section.font)) ?? .abrilRegular)
+            }
+            
+            return LettyTemplate(
+                coverImage: cover,
+                kind: Kind(rawValue: letty.kind!) ?? .basicOne,
+                sections: sections
+            )
         }
         
         return result
