@@ -13,6 +13,8 @@ struct LettyTemplate {
     var coverImage: UIImage?
     var kind: Kind
     
+    var sections: [LettySection]?
+    
     enum Kind: String {
         case basicOne
         case simpleOne
@@ -38,7 +40,15 @@ struct LettyTemplate {
             return LettyTemplate(coverImage: nil, kind: Kind(rawValue: "") ?? .basicOne)
         }
         
-        return []
+        return result
     }
+    
+}
+
+struct LettySection {
+    
+    var text: String
+    var color: Colors
+    var font: Fonts
     
 }

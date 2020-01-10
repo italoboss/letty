@@ -32,22 +32,22 @@ class LettyTemplateViewController: UIViewController {
     let reusableCellIdentifier = "LettyBgCell"
     
     var backgrounds = [
-        LettyBg(coverImage: UIImage(named: "bg01")),
-        LettyBg(coverImage: UIImage(named: "bg02")),
-        LettyBg(coverImage: UIImage(named: "bg03")),
-        LettyBg(coverImage: UIImage(named: "bg04")),
-        LettyBg(coverImage: UIImage(named: "bg05")),
-        LettyBg(coverImage: UIImage(named: "bg06")),
-        LettyBg(coverImage: UIImage(named: "bg07")),
-        LettyBg(coverImage: UIImage(named: "bg08")),
-        LettyBg(coverImage: UIImage(named: "bg09")),
-        LettyBg(coverImage: UIImage(named: "bg10")),
-        LettyBg(coverImage: UIImage(named: "bg11")),
-        LettyBg(coverImage: UIImage(named: "bg12")),
-        LettyBg(coverImage: UIImage(named: "bg13")),
-        LettyBg(coverImage: UIImage(named: "bg14")),
-        LettyBg(coverImage: UIImage(named: "bg15")),
-        LettyBg(coverImage: UIImage(named: "bg16"))
+        LettyBg(kind: .bg01),
+        LettyBg(kind: .bg02),
+        LettyBg(kind: .bg03),
+        LettyBg(kind: .bg04),
+        LettyBg(kind: .bg05),
+        LettyBg(kind: .bg06),
+        LettyBg(kind: .bg07),
+        LettyBg(kind: .bg08),
+        LettyBg(kind: .bg09),
+        LettyBg(kind: .bg10),
+        LettyBg(kind: .bg11),
+        LettyBg(kind: .bg12),
+        LettyBg(kind: .bg13),
+        LettyBg(kind: .bg14),
+        LettyBg(kind: .bg15),
+        LettyBg(kind: .bg16)
     ]
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
@@ -154,7 +154,7 @@ extension LettyTemplateViewController: UICollectionViewDataSource {
         }
         
         let bg = backgrounds[indexPath.row]
-        cell.coverView.image = bg.coverImage
+        cell.coverView.image = bg.kind.image
         
         return cell
     }
@@ -165,7 +165,7 @@ extension LettyTemplateViewController: UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let bg = backgrounds[indexPath.row]
-        templateView?.image = bg.coverImage
+        templateView?.image = bg.kind.image
     }
     
 }

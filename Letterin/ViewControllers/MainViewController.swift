@@ -60,7 +60,7 @@ class MainViewController: UIViewController {
     
     func setupCollectionView() {
         let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
-        layout.sectionInset = UIEdgeInsets(top: 20, left: 10, bottom: 10, right: 10)
+        layout.sectionInset = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
         layout.itemSize = CGSize(width: 124, height: 220)
         
         let collectionView = UICollectionView(frame: self.view.frame, collectionViewLayout: layout)
