@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="15702" systemVersion="18G1012" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="16119" systemVersion="19E287" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Letty" representedClassName="Letty" syncable="YES" codeGenerationType="class">
+        <attribute name="background" optional="YES" attributeType="String"/>
         <attribute name="coverPath" optional="YES" attributeType="String"/>
-        <attribute name="createdAt" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="createdAt" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="kind" attributeType="String"/>
-        <relationship name="sections" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Section"/>
+        <relationship name="sections" optional="YES" toMany="YES" deletionRule="Cascade" ordered="YES" destinationEntity="Section"/>
     </entity>
     <entity name="Section" representedClassName="Section" syncable="YES" codeGenerationType="class">
         <attribute name="color" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="font" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
-        <attribute name="order" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="text" attributeType="String"/>
     </entity>
     <elements>
-        <element name="Letty" positionX="-63" positionY="-18" width="128" height="103"/>
-        <element name="Section" positionX="-54" positionY="18" width="128" height="103"/>
+        <element name="Letty" positionX="-63" positionY="-18" width="128" height="118"/>
+        <element name="Section" positionX="-54" positionY="18" width="128" height="88"/>
     </elements>
 </model>

@@ -63,6 +63,13 @@ class CoreDataManager: NSObject {
         return result?.first
     }
     
+    func fetchObject<T: NSManagedObject>(by createdDate: Date?) -> T? {
+        guard let createdAt = createdDate else { return nil }
+        let predicate = NSPredicate(format: "createdAt == %@", createdAt as NSDate)
+        let result: [T]? = self.fecth(where: NSCompoundPredicate(andPredicateWithSubpredicates: [predicate]))
+        return result?.first
+    }
+    
     func fecth<T: NSManagedObject>(where predicates: NSCompoundPredicate? = nil, sorting sorters: [NSSortDescriptor]? = nil) -> [T]? {
         let context = persistentContainer.viewContext
         let entityName = String(describing: T.self)

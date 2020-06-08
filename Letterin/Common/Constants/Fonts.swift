@@ -134,4 +134,11 @@ extension Fonts {
         return UIFont(name: self.name, size: size)!
     }
     
+    static func caseFromName(_ name: String?) -> Fonts {
+        for c in Fonts.allCases where c.name == name {
+            return c
+        }
+        return abrilRegular
+    }
+    
 }

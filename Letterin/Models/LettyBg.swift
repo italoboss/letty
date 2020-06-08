@@ -12,7 +12,27 @@ struct LettyBg {
     
     var kind: Kind
     
-    enum Kind: String {
+    enum Kind: String, CaseIterable {
+        case bg17
+        case bg18
+        case bg19
+        case bg20
+        case bg21
+        case bg22
+        case bg23
+        case bg24
+        case bg25
+        case bg26
+        case bg27
+        case bg28
+        case bg29
+        case bg30
+        case bg31
+        case bg32
+        case bg33
+        case bg34
+        case bg35
+        
         case bg01
         case bg02
         case bg03
@@ -33,6 +53,10 @@ struct LettyBg {
         var image: UIImage? {
             return UIImage(named: self.rawValue)
         }
+    }
+    
+    static func loadAllKinds() -> [LettyBg] {
+        return LettyBg.Kind.allCases.map { LettyBg(kind: $0) }
     }
     
 }

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class BasicOneTemplate: UIImageView {
+class BasicOneTemplate: UIImageView, LettyTemplating {
 
     var topSection = LetteringSectionView()
     var smallSection = LetteringSectionView()
@@ -59,6 +59,36 @@ class BasicOneTemplate: UIImageView {
         smallSection.isUserInteractionEnabled = true
         middleSection.isUserInteractionEnabled = true
         bottomSection.isUserInteractionEnabled = true
+    }
+    
+    func fill(template: LettyTemplate) {
+        let lenght = 4
+        guard
+            let sections = template.sections,
+            sections.count >= lenght
+            else {
+            return
+        }
+        
+        let top = sections[0]
+        topSection.text = top.text
+        topSection.fontName = top.font.name
+        topSection.textColor = top.color.value
+        
+        let small = sections[1]
+        smallSection.text = small.text
+        smallSection.fontName = small.font.name
+        smallSection.textColor = small.color.value
+        
+        let middle = sections[2]
+        middleSection.text = middle.text
+        middleSection.fontName = middle.font.name
+        middleSection.textColor = middle.color.value
+        
+        let bottom = sections[3]
+        bottomSection.text = bottom.text
+        bottomSection.fontName = bottom.font.name
+        bottomSection.textColor = bottom.color.value
     }
     
 }

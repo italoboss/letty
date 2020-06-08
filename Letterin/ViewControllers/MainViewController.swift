@@ -23,17 +23,9 @@ class MainViewController: UIViewController {
         return tabsSC
     }()
     
-    let templates = [
-        LettyTemplate(coverImage: UIImage(named: "model6"), kind: .basicOne),
-        LettyTemplate(coverImage: UIImage(named: "model5"), kind: .simpleOne),
-        LettyTemplate(coverImage: UIImage(named: "model2"), kind: .centerCurvedOne),
-        LettyTemplate(coverImage: UIImage(named: "model1"), kind: .centerCurvedTwo),
-        LettyTemplate(coverImage: UIImage(named: "model3"), kind: .circleOne)
-    ]
+    let templates = LettyTemplateFactory.makeAll()
     
-    let gallery: [LettyTemplate] = [
-        LettyTemplate(coverImage: UIImage(named: "model6"), kind: .basicOne)
-    ]
+    var gallery: [LettyTemplate] = []
     
     var selectedTab = 0 {
         didSet {
@@ -97,6 +89,9 @@ class MainViewController: UIViewController {
     
     @objc func didSelectedTab(_ sender: UISegmentedControl) {
         selectedTab = sender.selectedSegmentIndex
+        if selectedTab == 1 {
+            gallery = LettyTemplate.loadAllAtGallery()
+        }
     }
     
 }
@@ -126,8 +121,7 @@ extension MainViewController: UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let model = selectedTab == 0 ? templates[indexPath.row] : gallery[indexPath.row]
-        let destination = LettyTemplateViewController()
-        destination.templateView = model.kind.classType.init()
+        let destination = LettyTemplateViewController(letty: model)
         destination.modalPresentationStyle = .fullScreen
         // Comment used for layout new templates
 //        destination.templateView?.image = model.coverImage

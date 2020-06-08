@@ -53,7 +53,7 @@ extension UIView {
             self.heightAnchor.constraint(equalToConstant: height).isActive = true
         }
         if let aspectRatio = aspectRatio {
-            self.widthAnchor.constraint(equalTo: self.heightAnchor, multiplier: aspectRatio)
+            self.widthAnchor.constraint(equalTo: self.heightAnchor, multiplier: aspectRatio).isActive = true
         }
     }
 }

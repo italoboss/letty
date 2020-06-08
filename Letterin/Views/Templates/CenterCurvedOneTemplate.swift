@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CenterCurvedOneTemplate: UIImageView {
+class CenterCurvedOneTemplate: UIImageView, LettyTemplating {
 
     var topSmallSection = LetteringSectionView()
     var topSection = LetteringSectionView()
@@ -65,6 +65,41 @@ class CenterCurvedOneTemplate: UIImageView {
         centerCurvedSection.isUserInteractionEnabled = true
         bottomSmallSection.isUserInteractionEnabled = true
         bottomSection.isUserInteractionEnabled = true
+    }
+    
+    func fill(template: LettyTemplate) {
+        let lenght = 5
+        guard
+            let sections = template.sections,
+            sections.count >= lenght
+            else {
+            return
+        }
+        
+        let topSmall = sections[0]
+        topSmallSection.text = topSmall.text
+        topSmallSection.fontName = topSmall.font.name
+        topSmallSection.textColor = topSmall.color.value
+        
+        let top = sections[1]
+        topSection.text = top.text
+        topSection.fontName = top.font.name
+        topSection.textColor = top.color.value
+        
+        let centerCurved = sections[2]
+        centerCurvedSection.text = centerCurved.text
+        centerCurvedSection.fontName = centerCurved.font.name
+        centerCurvedSection.textColor = centerCurved.color.value
+        
+        let bottomSmall = sections[3]
+        bottomSmallSection.text = bottomSmall.text
+        bottomSmallSection.fontName = bottomSmall.font.name
+        bottomSmallSection.textColor = bottomSmall.color.value
+        
+        let bottom = sections[4]
+        bottomSection.text = bottom.text
+        bottomSection.fontName = bottom.font.name
+        bottomSection.textColor = bottom.color.value
     }
     
 }

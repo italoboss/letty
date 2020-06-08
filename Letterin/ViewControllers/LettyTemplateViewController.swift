@@ -11,6 +11,7 @@ import UIKit
 class LettyTemplateViewController: UIViewController {
     
     var templateView: UIImageView? = nil
+    var lettyTemplate: LettyTemplate
     
     let closeButton: UIButton = {
         let button = UIButton()
@@ -42,24 +43,7 @@ class LettyTemplateViewController: UIViewController {
     var backgroundsCollection: UICollectionView?
     let reusableCellIdentifier = "LettyBgCell"
     
-    var backgrounds = [
-        LettyBg(kind: .bg01),
-        LettyBg(kind: .bg02),
-        LettyBg(kind: .bg03),
-        LettyBg(kind: .bg04),
-        LettyBg(kind: .bg05),
-        LettyBg(kind: .bg06),
-        LettyBg(kind: .bg07),
-        LettyBg(kind: .bg08),
-        LettyBg(kind: .bg09),
-        LettyBg(kind: .bg10),
-        LettyBg(kind: .bg11),
-        LettyBg(kind: .bg12),
-        LettyBg(kind: .bg13),
-        LettyBg(kind: .bg14),
-        LettyBg(kind: .bg15),
-        LettyBg(kind: .bg16)
-    ]
+    var backgrounds = LettyBg.loadAllKinds()
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
         if #available(iOS 13.0, *) {
@@ -69,11 +53,30 @@ class LettyTemplateViewController: UIViewController {
         }
     }
     
+    init(letty: LettyTemplate) {
+        lettyTemplate = letty
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupCollectionView()
+        loadData()
         setupLayout()
         setupGestures()
+    }
+    
+    func loadData() {
+        let kindTemplateView = lettyTemplate.kind.classType.init()
+        kindTemplateView.image = lettyTemplate.backgroud?.kind.image
+        templateView = kindTemplateView
+        if let templating = kindTemplateView as? LettyTemplating {
+            templating.fill(template: lettyTemplate)
+        }
     }
     
     func setupLayout() {
@@ -145,7 +148,39 @@ class LettyTemplateViewController: UIViewController {
     }
     
     @objc func didTapSave() {
+        setupDataToSave()
         
+        if lettyTemplate.saveAtGallery() {
+            let alert = UIAlertController(title: "Saved!", message: nil, preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { (_) in
+                alert.dismiss(animated: true, completion: nil)
+            }))
+            present(alert, animated: true, completion: nil)
+        }
+        else {
+            let alert = UIAlertController(title: "Error on saving", message: "Cannot save your Letty.", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { (_) in
+                alert.dismiss(animated: true, completion: nil)
+            }))
+            present(alert, animated: true, completion: nil)
+        }
+    }
+    
+    private func setupDataToSave() {
+        lettyTemplate.backgroud = getSelectedBackground()
+        if let template = templateView {
+            lettyTemplate.sections = []
+            let mirror = Mirror(reflecting: template)
+            for child in mirror.children {
+                if let section = child.value as? LetteringSectionView {
+                    lettyTemplate.sections?.append(
+                        LettySection(text: section.text,
+                                     color: Colors.caseFromValue(section.textColor),
+                                     font: Fonts.caseFromName(section.fontName))
+                    )
+                }
+            }
+        }
     }
     
     @objc func didTapShare() {
@@ -172,6 +207,16 @@ extension LettyTemplateViewController: UICollectionViewDataSource {
         cell.coverView.image = bg.kind.image
         
         return cell
+    }
+    
+    func getSelectedBackground() -> LettyBg? {
+        guard
+            let indexPaths = backgroundsCollection?.indexPathsForSelectedItems,
+            let selected = indexPaths.first
+            else {
+                return nil
+        }
+        return backgrounds[selected.row]
     }
     
 }

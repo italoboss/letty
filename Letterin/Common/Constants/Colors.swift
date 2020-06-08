@@ -130,4 +130,11 @@ extension Colors {
         }
     }
     
+    static func caseFromValue(_ value: UIColor?) -> Colors {
+        for c in Colors.allCases where c.value == value {
+            return c
+        }
+        return primary
+    }
+    
 }

@@ -8,10 +8,20 @@
 
 import UIKit
 
+struct LettySection {
+    
+    var text: String?
+    var color: Colors
+    var font: Fonts
+    
+}
+
 struct LettyTemplate {
     
+    var createdAt: Date?
     var coverImage: UIImage?
     var kind: Kind
+    var backgroud: LettyBg?
     
     var sections: [LettySection]?
     
@@ -34,9 +44,12 @@ struct LettyTemplate {
     }
     
     func saveAtGallery() -> Bool {
-        let letty: Letty = CoreDataManager.shared.initManagedObject()
+        let letty: Letty =
+            CoreDataManager.shared.fetchObject(by: self.createdAt) ??
+            CoreDataManager.shared.initManagedObject()
         letty.kind = self.kind.rawValue
-        letty.createdAt = Date()
+        letty.createdAt = self.createdAt ?? Date()
+        letty.background = self.backgroud?.kind.rawValue
         
         if let cover = self.coverImage {
             var path = AppConfig.LOCAL_IMAGES_PATH
@@ -48,7 +61,7 @@ struct LettyTemplate {
         }
         
         if let sections = self.sections {
-            letty.sections = NSSet(array: sections.compactMap { section -> Section? in
+            letty.sections = NSOrderedSet(array: sections.compactMap { section -> Section? in
                 let result: Section = CoreDataManager.shared.initManagedObject()
                 result.text = section.text
                 result.color = Int64(section.color.rawValue)
@@ -60,10 +73,14 @@ struct LettyTemplate {
         return CoreDataManager.shared.saveContext()
     }
     
-    func loadAllAtGallery() -> [LettyTemplate] {
+    static func loadAllAtGallery() -> [LettyTemplate] {
         let letties: [Letty] = CoreDataManager.shared.fecth() ?? []
         
         let result = letties.map { letty -> LettyTemplate in
+            var bg: LettyBg? = nil
+            if let background = letty.background {
+               bg = LettyBg(kind: LettyBg.Kind(rawValue: background) ?? .bg17)
+            }
             
             var cover: UIImage? = nil
             if let coverPath = letty.coverPath {
@@ -78,8 +95,10 @@ struct LettyTemplate {
             }
             
             return LettyTemplate(
+                createdAt: letty.createdAt,
                 coverImage: cover,
                 kind: Kind(rawValue: letty.kind!) ?? .basicOne,
+                backgroud: bg,
                 sections: sections
             )
         }
@@ -89,10 +108,19 @@ struct LettyTemplate {
     
 }
 
-struct LettySection {
+struct LettyTemplateFactory {
     
-    var text: String
-    var color: Colors
-    var font: Fonts
+    static func makeAll() -> [LettyTemplate] {
+        return [
+            LettyTemplate(
+                coverImage: UIImage(named: "model6"),
+                kind: .basicOne
+            ),
+            LettyTemplate(coverImage: UIImage(named: "model5"), kind: .simpleOne),
+            LettyTemplate(coverImage: UIImage(named: "model2"), kind: .centerCurvedOne),
+            LettyTemplate(coverImage: UIImage(named: "model1"), kind: .centerCurvedTwo),
+            LettyTemplate(coverImage: UIImage(named: "model3"), kind: .circleOne)
+        ]
+    }
     
 }
