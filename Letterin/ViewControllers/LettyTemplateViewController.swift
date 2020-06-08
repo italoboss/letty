@@ -12,6 +12,8 @@ class LettyTemplateViewController: UIViewController {
     
     var templateView: UIImageView? = nil
     var lettyTemplate: LettyTemplate
+    var shadowHeaderView: UIView = UIView()
+    var shadowFooterView: UIView = UIView()
     
     let closeButton: UIButton = {
         let button = UIButton()
@@ -44,10 +46,10 @@ class LettyTemplateViewController: UIViewController {
     let reusableCellIdentifier = "LettyBgCell"
     
     var backgrounds = LettyBg.loadAllKinds()
-    
+        
     override var preferredStatusBarStyle: UIStatusBarStyle {
         if #available(iOS 13.0, *) {
-            return .darkContent
+            return .lightContent
         } else {
             return .default
         }
@@ -89,6 +91,30 @@ class LettyTemplateViewController: UIViewController {
             view.addSubview(template)
             template.anchor(top: view.topAnchor, left: view.leftAnchor, bottom: view.bottomAnchor, right: view.rightAnchor)
         }
+        
+        view.addSubview(shadowHeaderView)
+        shadowHeaderView.anchor(top: view.topAnchor, left: view.leftAnchor, right: view.rightAnchor, height: 160)
+        view.addSubview(shadowFooterView)
+        shadowFooterView.anchor(left: view.leftAnchor, bottom: view.bottomAnchor, right: view.rightAnchor, height: 160)
+        
+        var gl = CAGradientLayer()
+        gl.frame = CGRect(x: 0, y: 0, width: view.frame.width, height: 160)
+        gl.colors = [
+            UIColor.black.withAlphaComponent(0.8).cgColor,
+            UIColor.black.withAlphaComponent(0).cgColor
+        ]
+        gl.locations = [0.0, 1.0]
+        shadowHeaderView.layer.addSublayer(gl)
+        
+        gl = CAGradientLayer()
+        gl.frame = CGRect(x: 0, y: 0, width: view.frame.width, height: 160)
+        gl.colors = [
+            UIColor.black.withAlphaComponent(0).cgColor,
+            UIColor.black.withAlphaComponent(0.8).cgColor
+        ]
+        gl.locations = [0.0, 1.0]
+        shadowFooterView.layer.addSublayer(gl)
+        
         
         view.addSubview(closeButton)
         view.addSubview(shareButton)
