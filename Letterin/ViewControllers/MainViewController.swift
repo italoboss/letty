@@ -54,6 +54,7 @@ class MainViewController: UIViewController {
         let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
         layout.sectionInset = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
         layout.itemSize = CGSize(width: 124, height: 220)
+        layout.minimumLineSpacing = 20
         
         let collectionView = UICollectionView(frame: self.view.frame, collectionViewLayout: layout)
         collectionView.register(LettyTemplateCollectionViewCell.self, forCellWithReuseIdentifier: reusableCellIdentifier)
@@ -82,7 +83,7 @@ class MainViewController: UIViewController {
         
         if let collection = templatesCollection {
             view.addSubview(collection)
-            collection.anchor(top: tabs.bottomAnchor, left: view.leftAnchor, bottom: view.layoutMarginsGuide.bottomAnchor, right: view.rightAnchor, paddingTop: 8, paddingLeft: 16, paddingRight: 64)
+            collection.anchor(top: tabs.bottomAnchor, left: view.leftAnchor, bottom: view.layoutMarginsGuide.bottomAnchor, paddingTop: 8, paddingLeft: 16, width: 290)
             collection.showsVerticalScrollIndicator = false
         }
     }
@@ -108,8 +109,11 @@ extension MainViewController: UICollectionViewDataSource {
             return UICollectionViewCell()
         }
         
+        cell.backgroundColor = .white
         let template = selectedTab == 0 ? templates[indexPath.row] : gallery[indexPath.row]
         cell.coverView.image = template.coverImage
+        cell.coverView.contentMode = .scaleAspectFit
+        cell.coverView.alpha = 0.5
         
         return cell
     }
