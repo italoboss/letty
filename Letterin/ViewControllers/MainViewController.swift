@@ -104,7 +104,7 @@ class MainViewController: UIViewController {
         
         if let collection = templatesCollection {
             view.addSubview(collection)
-            collection.anchor(top: tabs.bottomAnchor, left: view.leftAnchor, bottom: view.layoutMarginsGuide.bottomAnchor, paddingTop: 8, paddingLeft: 16, width: 290)
+            collection.anchor(top: tabs.bottomAnchor, left: view.leftAnchor, bottom: view.bottomAnchor, paddingTop: 8, paddingLeft: 16, width: 290)
             collection.showsVerticalScrollIndicator = false
         }
         
