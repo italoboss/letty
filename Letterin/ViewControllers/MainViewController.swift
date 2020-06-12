@@ -139,7 +139,7 @@ extension MainViewController: UICollectionViewDataSource {
         let template = selectedTab == 0 ? templates[indexPath.row] : gallery[indexPath.row]
         cell.coverView.image = template.coverImage
         cell.coverView.contentMode = .scaleAspectFit
-        cell.coverView.alpha = 0.5
+        cell.coverView.alpha = 0.7
         
         return cell
     }
