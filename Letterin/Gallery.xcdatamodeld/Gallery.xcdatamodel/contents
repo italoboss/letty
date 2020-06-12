@@ -10,7 +10,7 @@
     <entity name="Section" representedClassName="Section" syncable="YES" codeGenerationType="class">
         <attribute name="color" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="font" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
-        <attribute name="text" attributeType="String"/>
+        <attribute name="text" optional="YES" attributeType="String"/>
     </entity>
     <elements>
         <element name="Letty" positionX="-63" positionY="-18" width="128" height="118"/>
