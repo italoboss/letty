@@ -19,7 +19,7 @@ class LettyTemplateViewController: UIViewController {
         let button = UIButton()
         button.setTitle("Back", for: .normal)
         button.titleLabel?.font = UIFont(name: Fonts.abrilRegular.name, size: 17)
-        button.setTitleColor(Colors.primary.value, for: .normal)
+        button.setTitleColor(.white, for: .normal)
         button.addTarget(self, action: #selector(didTapClose), for: .touchUpInside)
         return button
     }()
@@ -28,7 +28,7 @@ class LettyTemplateViewController: UIViewController {
         let button = UIButton()
         button.setTitle("Share", for: .normal)
         button.titleLabel?.font = UIFont(name: Fonts.abrilRegular.name, size: 17)
-        button.setTitleColor(Colors.primary.value, for: .normal)
+        button.setTitleColor(.white, for: .normal)
         button.addTarget(self, action: #selector(didTapShare), for: .touchUpInside)
         return button
     }()
@@ -37,7 +37,7 @@ class LettyTemplateViewController: UIViewController {
         let button = UIButton()
         button.setTitle("Save", for: .normal)
         button.titleLabel?.font = UIFont(name: Fonts.abrilRegular.name, size: 17)
-        button.setTitleColor(Colors.primary.value, for: .normal)
+        button.setTitleColor(.white, for: .normal)
         button.addTarget(self, action: #selector(didTapSave), for: .touchUpInside)
         return button
     }()
