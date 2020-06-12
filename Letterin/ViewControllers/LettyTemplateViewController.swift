@@ -72,9 +72,13 @@ class LettyTemplateViewController: UIViewController {
         setupGestures()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        setSelectedBackground(lettyTemplate.backgroud)
+    }
+    
     func loadData() {
         let kindTemplateView = lettyTemplate.kind.classType.init()
-        kindTemplateView.image = lettyTemplate.backgroud?.kind.image
+        kindTemplateView.image = lettyTemplate.backgroud?.kind.image ?? backgrounds.first?.kind.image
         templateView = kindTemplateView
         if let templating = kindTemplateView as? LettyTemplating {
             templating.fill(template: lettyTemplate)
@@ -235,7 +239,16 @@ extension LettyTemplateViewController: UICollectionViewDataSource {
         return cell
     }
     
-    func getSelectedBackground() -> LettyBg? {
+    private func setSelectedBackground(_ selected: LettyBg?) {
+        if let selectedIndex = backgrounds.firstIndex(where: { $0.kind == selected?.kind }) {
+            backgroundsCollection?.selectItem(at: IndexPath(row: selectedIndex, section: 0), animated: true, scrollPosition: .left)
+        }
+        else {
+            backgroundsCollection?.selectItem(at: IndexPath(row: 0, section: 0), animated: true, scrollPosition: .left)
+        }
+    }
+    
+    private func getSelectedBackground() -> LettyBg? {
         guard
             let indexPaths = backgroundsCollection?.indexPathsForSelectedItems,
             let selected = indexPaths.first

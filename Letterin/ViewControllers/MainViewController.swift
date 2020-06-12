@@ -25,7 +25,13 @@ class MainViewController: UIViewController {
     
     let templates = LettyTemplateFactory.makeAll()
     
-    var gallery: [LettyTemplate] = []
+    var gallery: [LettyTemplate] = [] {
+        didSet {
+            if selectedTab == 1 {
+                templatesCollection?.reloadData()
+            }
+        }
+    }
     
     var selectedTab = 0 {
         didSet {
@@ -48,6 +54,10 @@ class MainViewController: UIViewController {
         self.setNeedsStatusBarAppearanceUpdate()
         
         tabs.addTarget(self, action: #selector(didSelectedTab), for: .valueChanged)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        gallery = LettyTemplate.loadAllAtGallery()
     }
     
     func setupCollectionView() {
@@ -90,9 +100,6 @@ class MainViewController: UIViewController {
     
     @objc func didSelectedTab(_ sender: UISegmentedControl) {
         selectedTab = sender.selectedSegmentIndex
-        if selectedTab == 1 {
-            gallery = LettyTemplate.loadAllAtGallery()
-        }
     }
     
 }
