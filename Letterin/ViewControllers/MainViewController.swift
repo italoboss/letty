@@ -23,10 +23,20 @@ class MainViewController: UIViewController {
         return tabsSC
     }()
     
+    let labelEmptyGallery: UILabel = {
+        let label = UILabel()
+        label.numberOfLines = 0
+        label.text = "No Letties in your gallery yet.\nSave one to see here. :)"
+        label.font = UIFont(name: Fonts.geometria.name, size: 15)
+        label.textColor = .gray
+        return label
+    }()
+    
     let templates = LettyTemplateFactory.makeAll()
     
     var gallery: [LettyTemplate] = [] {
         didSet {
+            toggleLabelGalleryEmpty()
             if selectedTab == 1 {
                 templatesCollection?.reloadData()
             }
@@ -35,6 +45,7 @@ class MainViewController: UIViewController {
     
     var selectedTab = 0 {
         didSet {
+            toggleLabelGalleryEmpty()
             templatesCollection?.reloadData()
         }
     }
@@ -96,6 +107,14 @@ class MainViewController: UIViewController {
             collection.anchor(top: tabs.bottomAnchor, left: view.leftAnchor, bottom: view.layoutMarginsGuide.bottomAnchor, paddingTop: 8, paddingLeft: 16, width: 290)
             collection.showsVerticalScrollIndicator = false
         }
+        
+        view.addSubview(labelEmptyGallery)
+        labelEmptyGallery.anchor(top: tabs.bottomAnchor, left: view.leftAnchor, paddingTop: 24, paddingLeft: 24)
+        labelEmptyGallery.isHidden = true
+    }
+    
+    private func toggleLabelGalleryEmpty() {
+        labelEmptyGallery.isHidden = !gallery.isEmpty || selectedTab != 1
     }
     
     @objc func didSelectedTab(_ sender: UISegmentedControl) {
